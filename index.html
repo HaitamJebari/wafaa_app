@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#171b35" />
   <meta name="description"
     content="WAFAA strengthens families and the community through education, connection and practical support across northern New Jersey." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
   <title>WAFAA — Stronger families. Safer tomorrows.</title>
 </head>
@@ -15,9 +15,11 @@
 <body>
   <div id="app">
     <div class="topline">
-      <div class="site-container topline__inner"><span><span class="topline__pulse"></span></i> Available 24 hours / 7 days
+      <div class="site-container topline__inner"><span><span class="topline__pulse"></span></i> Available 24 hours / 7
+          days
           a week</span><a href="tel:9737662406">Call for immediate support ↗</a></div>
     </div>
+    
     <header class="site-header">
       <div class="site-container site-header__inner">
         <a class="brand" href="#top">
@@ -28,10 +30,81 @@
             <strong>WAFAA</strong>
             <small>Women &amp; Families<br />Ascending Association</small>
           </span></a>
-        <nav class="site-nav" id="site-nav"><a href="#work">Our work</a><a href="#about">Who we are</a><a
-            href="#programs">Programs</a><a href="#support">Get involved</a><a href="#contact">Contact</a><a
-            class="button button--small button--nav" href="#support">Support WAFAA ↗</a>
-        </nav><button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+        <nav class="site-nav" id="site-nav">
+          <a href="/">Home</a>
+
+          <div class="nav-dropdown">    
+            <button class="nav-dropdown__toggle" aria-expanded="false">
+              Our Services <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="nav-dropdown__menu">
+              <a href="./components/our_services/Parenting_classes.html">Parenting Classes</a>
+              <a href="./components/our_services/Bill_insurance_assistance.html">Bill & Insurance Assistance</a>
+              <a href="./components/our_services/Counseling_sessions.html">Counseling Sessions</a>
+              <a href="./components/our_services/Crisis_intervention_therapy.html">Crisis Intervention Therapy</a>
+              <a href="./components/our_services/Emergency_housing.html">Emergency Housing</a>
+              <a href="./components/our_services/Food_pantry_shelter.html">Food Pantry & Shelter</a>
+              <a href="./components/our_services/Immigration_services.html">Immigration Services</a>
+              <a href="./components/our_services/Legal_assistance.html">Legal Assistance</a>
+              <a href="./components/our_services/Notary_public.html">Notary Public</a>
+              
+              
+              <div class="submenu">
+                <button class="submenu__toggle" aria-expanded="false">
+                  More Services
+                  <i class="fa-solid fa-angle-down"></i>
+                </button>
+              
+                <div class="submenu__menu">
+                  <a href="./components/our_services/more_services/Senior_care_services.html">Senior Care Services</a>
+                  <a href="./components/our_services/more_services/Other_services.html">Other Services</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="nav-dropdown">    
+            <button class="nav-dropdown__toggle" aria-expanded="false">
+              About Us <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="nav-dropdown__menu">
+              <a href="./components/about us/Our_history.html">Our History</a>
+              <a href="./components/about us/About_the_founder.html">About The Founder</a>
+              <a href="./components/about us/Our_supporters.html">Our Supporters</a>
+              <a href="./components/about us/Partnerships.html">Partnerships</a>
+              <a href="./components/about us/Client_testimory.html">Client Testimory</a>
+              <a href="./components/about us/Our_work.html">Our Work</a>
+            </div>
+          </div>
+
+
+          <div class="nav-dropdown">    
+            <button class="nav-dropdown__toggle" aria-expanded="false">
+              Contribute <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="nav-dropdown__menu">
+              <a href="./components/contribute/Visit_paypal.html">Visit Paypal</a>
+              <a href="./components/contribute/Volunteer.html">Volunteer</a>
+            </div>
+          </div>
+    
+    
+          <div class="nav-dropdown">    
+            <button class="nav-dropdown__toggle" aria-expanded="false">
+              Contact <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="nav-dropdown__menu">
+              <a href="./components/contact/Contact_us.html">Contact Us</a>
+              <a href="./components/contact/Client_intake.html">Client Intake Application</a>
+              <a href="./components/contact/Membership_application.html">Membership Application</a>
+            </div>
+          </div>
+
+
+          <a class="button button--small button-nav" href="#support">Support WAFAA ↗</a>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
       </div>
     </header>
 
@@ -57,8 +130,8 @@
           </div>
           <div class="hero-visual__portrait"><img src="./assets/wafaa-founder.jpg" alt="Wafaa Saad, founder of WAFAA" />
           </div>
-          <div class="hero-visual__stamp">  <i class="fa-solid fa-solid fa-bell"></i>
-</i><span>Here to help</span><strong>24/7</strong></div>
+          <div class="hero-visual__stamp"> <i class="fa-solid fa-solid fa-bell"></i>
+            </i><span>Here to help</span><strong>24/7</strong></div>
         </div>
       </div>
       <div class="hero__scroll">Scroll to explore <span class="hero__scroll-line"></span></div>
