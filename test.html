@@ -1,0 +1,1506 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parenting Classes | WAFAA – Women and Family Ascending Association</title>
+  <meta name="description"
+    content="WAFAA parenting classes: guidance for new and current parents on discipline, hygiene, work–childcare balance and the stress of parenting.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1f2a37;
+      --muted: #5b6675;
+      --bg: #fbf9f6;
+      --card: #ffffff;
+      --line: #e8e3db;
+      --primary: #1f6f6b;
+      /* deep teal */
+      --primary-dark: #154f4c;
+      --accent: #e0824f;
+      /* warm terracotta */
+      --soft: #e8f2f0;
+      --sand: #f4ede3;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(31, 42, 55, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Fraunces, Georgia, serif;
+      line-height: 1.15;
+      color: var(--ink)
+    }
+
+    .wrap {
+      width: min(1120px, 100% - 40px);
+      margin-inline: auto
+    }
+
+    /* Header */
+    .topbar {
+      background: var(--primary-dark);
+      color: #dcebe9;
+      font-size: .85rem
+    }
+
+    .topbar .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 0;
+      flex-wrap: wrap
+    }
+
+    .topbar a:hover {
+      color: #fff;
+      text-decoration: underline
+    }
+
+
+    /* ---------------------------------------------------------------- */
+
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 249, 246, .92);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 20px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .brand img {
+      height: 46px;
+      width: auto;
+      border-radius: 8px
+    }
+
+    .brand span {
+      font-family: Fraunces, serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: .02em;
+      color: var(--primary-dark)
+    }
+
+    .brand small {
+      display: block;
+      font-family: Inter, sans-serif;
+      font-weight: 500;
+      font-size: .68rem;
+      letter-spacing: .04em;
+      color: var(--muted);
+      line-height: 1.2
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 6px;
+      align-items: center
+    }
+
+    nav a.link {
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: .95rem;
+      color: var(--ink)
+    }
+
+    nav a.link:hover,
+    nav a.link.active {
+      background: var(--soft);
+      color: var(--primary-dark)
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: .95rem;
+      border: 2px solid transparent;
+      transition: .2s;
+      cursor: pointer
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px)
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #fff
+    }
+
+    .btn-accent:hover {
+      filter: brightness(.93);
+      transform: translateY(-1px)
+    }
+
+    .btn-ghost {
+      border-color: var(--primary);
+      color: var(--primary-dark)
+    }
+
+    .btn-ghost:hover {
+      background: var(--primary);
+      color: #fff
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      cursor: pointer
+    }
+
+
+/* ------------------------------------------------------------ */
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, #17504d 0%, #1f6f6b 55%, #2a8b85 100%);
+      color: #fff;
+      overflow: hidden
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -120px;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(224, 130, 79, .22)
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: -80px;
+      bottom: -140px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .07)
+    }
+
+    .hero .wrap {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 56px;
+      align-items: center;
+      padding: 84px 0 92px
+    }
+
+    .crumbs {
+      font-size: .88rem;
+      opacity: .85;
+      margin-bottom: 18px
+    }
+
+    .crumbs a:hover {
+      text-decoration: underline
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255, 255, 255, .14);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 20px
+    }
+
+    .hero h1 {
+      color: #fff;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      margin-bottom: 20px;
+      font-weight: 600
+    }
+
+    .hero p.lead {
+      font-size: 1.15rem;
+      color: #e3f0ee;
+      max-width: 56ch;
+      margin-bottom: 32px
+    }
+
+    .hero .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    .hero .btn-ghost {
+      border-color: rgba(255, 255, 255, .7);
+      color: #fff
+    }
+
+    .hero .btn-ghost:hover {
+      background: #fff;
+      color: var(--primary-dark)
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: var(--radius);
+      padding: 32px;
+      backdrop-filter: blur(6px)
+    }
+
+    .hero-card h3 {
+      color: #fff;
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+      font-family: Inter, sans-serif;
+      font-weight: 600;
+      letter-spacing: .01em
+    }
+
+    .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 12px
+    }
+
+    .hero-card li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #eaf5f3;
+      font-size: .98rem
+    }
+
+    .tick {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: grid;
+      place-items: center;
+      font-size: .72rem;
+      color: #fff;
+      margin-top: 2px
+    }
+
+    /* Sections */
+    section {
+      padding: 88px 0
+    }
+
+    .section-head {
+      max-width: 680px;
+      margin-bottom: 48px
+    }
+
+    .section-head .tag {
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      margin-bottom: 10px;
+      display: block
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+      margin-bottom: 14px
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.05rem
+    }
+
+    /* Intro */
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center
+    }
+
+    .intro .photo {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--sand);
+      padding: 28px;
+      display: grid;
+      place-items: center;
+      min-height: 320px
+    }
+
+    .intro .photo img {
+      max-height: 340px;
+      width: auto;
+      object-fit: contain
+    }
+
+    .intro p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 16px
+    }
+
+    .intro blockquote {
+      border-left: 4px solid var(--accent);
+      padding: 6px 0 6px 20px;
+      font-family: Fraunces, serif;
+      font-size: 1.25rem;
+      color: var(--ink);
+      margin-top: 22px
+    }
+
+    /* Cards */
+    .topics {
+      background: var(--sand)
+    }
+
+    .grid4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px 26px;
+      box-shadow: var(--shadow);
+      transition: .25s
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(31, 42, 55, .12)
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: var(--soft);
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      color: var(--primary)
+    }
+
+    .icon svg {
+      width: 28px;
+      height: 28px
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .95rem
+    }
+
+    /* Who */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px
+    }
+
+    .panel {
+      border-radius: var(--radius);
+      padding: 40px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: var(--shadow)
+    }
+
+    .panel.dark {
+      background: var(--primary-dark);
+      color: #e3f0ee;
+      border-color: transparent
+    }
+
+    .panel.dark h3 {
+      color: #fff
+    }
+
+    .panel h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px
+    }
+
+    .panel p {
+      color: var(--muted)
+    }
+
+    .panel.dark p {
+      color: #cfe3e0
+    }
+
+    /* Videos */
+    .videos {
+      background: #fff
+    }
+
+    .vgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px
+    }
+
+    .vcard {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow)
+    }
+
+    .frame {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: #0d1b1a
+    }
+
+    .frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0
+    }
+
+    .vcard .meta {
+      padding: 20px 24px
+    }
+
+    .vcard h3 {
+      font-size: 1.15rem;
+      margin-bottom: 4px
+    }
+
+    .vcard p {
+      color: var(--muted);
+      font-size: .92rem
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, var(--accent), #c96a39);
+      color: #fff;
+      border-radius: 28px;
+      padding: 64px 48px;
+      text-align: center;
+      box-shadow: var(--shadow)
+    }
+
+    .cta h2 {
+      color: #fff;
+      font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+      margin-bottom: 14px
+    }
+
+    .cta p {
+      max-width: 58ch;
+      margin: 0 auto 30px;
+      color: #fff3ea;
+      font-size: 1.08rem
+    }
+
+    .cta .actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .cta .btn-light {
+      background: #fff;
+      color: #a8501f
+    }
+
+    .cta .btn-light:hover {
+      background: #fff3ea;
+      transform: translateY(-1px)
+    }
+
+    .cta .btn-ghost {
+      border-color: #fff;
+      color: #fff
+    }
+
+    .cta .btn-ghost:hover {
+      background: #fff;
+      color: #a8501f
+    }
+
+    /* Related */
+    .related {
+      padding-top: 0
+    }
+
+    .rel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .rel {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      font-weight: 600;
+      transition: .2s
+    }
+
+    .rel:hover {
+      border-color: var(--primary);
+      color: var(--primary-dark);
+      transform: translateX(3px)
+    }
+
+    .rel span {
+      color: var(--accent)
+    }
+
+    /* Footer */
+    footer {
+      background: #13222a;
+      color: #b9c5cc;
+      padding: 64px 0 28px
+    }
+
+    .fgrid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    footer h4 {
+      color: #fff;
+      font-size: .95rem;
+      margin-bottom: 14px;
+      font-weight: 600;
+      letter-spacing: .04em
+    }
+
+    footer p {
+      font-size: .93rem;
+      max-width: 42ch
+    }
+
+    footer ul {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      font-size: .93rem
+    }
+
+    footer a:hover {
+      color: #fff
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px
+    }
+
+    .socials a {
+      padding: 7px 13px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 999px;
+      font-size: .82rem
+    }
+
+    .socials a:hover {
+      background: #fff;
+      color: #13222a
+    }
+
+    .copy {
+      padding-top: 24px;
+      font-size: .84rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    @media(max-width:960px) {
+
+      .hero .wrap,
+      .intro,
+      .split,
+      .vgrid {
+        grid-template-columns: 1fr
+      }
+
+      .grid4 {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .rel-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .fgrid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .hero .wrap {
+        padding: 60px 0 68px;
+        gap: 36px
+      }
+    }
+
+    @media(max-width:760px) {
+      .menu-btn {
+        display: block
+      }
+
+      nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+        display: none;
+        padding: 12px 20px 20px
+      }
+
+      nav.open {
+        display: block
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: stretch
+      }
+
+      nav a.link {
+        display: block
+      }
+
+      .brand small {
+        display: none
+      }
+
+      section {
+        padding: 64px 0
+      }
+
+      .grid4,
+      .rel-grid,
+      .fgrid {
+        grid-template-columns: 1fr
+      }
+
+      .cta {
+        padding: 44px 24px
+      }
+
+      .panel {
+        padding: 28px
+      }
+    }
+
+    /* ===== Animations ===== */
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      transform-origin: 0 50%;
+      transform: scaleX(0);
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      z-index: 100
+    }
+
+    header.site {
+      transition: box-shadow .3s, padding .3s
+    }
+
+    header.site.scrolled {
+      box-shadow: 0 8px 24px rgba(31, 42, 55, .08)
+    }
+
+    header.site.scrolled .nav {
+      padding: 8px 0
+    }
+
+    .nav {
+      transition: padding .3s
+    }
+
+    .brand img {
+      transition: height .3s
+    }
+
+    header.site.scrolled .brand img {
+      height: 38px
+    }
+
+    /* scroll reveal (only when JS is running) */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(34px);
+      transition: opacity .8s cubic-bezier(.2, .7, .2, 1), transform .8s cubic-bezier(.2, .7, .2, 1);
+      transition-delay: var(--d, 0s)
+    }
+
+    html.js .reveal.left {
+      transform: translateX(-40px)
+    }
+
+    html.js .reveal.right {
+      transform: translateX(40px)
+    }
+
+    html.js .reveal.zoom {
+      transform: scale(.94)
+    }
+
+    html.js .reveal.in {
+      opacity: 1;
+      transform: none
+    }
+
+    /* hero entrance */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes floatA {
+
+      0%,
+      100% {
+        transform: translate(0, 0)
+      }
+
+      50% {
+        transform: translate(-26px, 30px)
+      }
+    }
+
+    @keyframes floatB {
+
+      0%,
+      100% {
+        transform: translate(0, 0)
+      }
+
+      50% {
+        transform: translate(30px, -24px)
+      }
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(0)
+      }
+
+      70% {
+        transform: scale(1.2)
+      }
+
+      100% {
+        transform: scale(1)
+      }
+    }
+
+    @keyframes shine {
+      0% {
+        left: -60%
+      }
+
+      60%,
+      100% {
+        left: 130%
+      }
+    }
+
+    @keyframes bob {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .hero::before {
+      animation: floatA 14s ease-in-out infinite
+    }
+
+    .hero::after {
+      animation: floatB 17s ease-in-out infinite
+    }
+
+    .hero .crumbs,
+    .hero .eyebrow,
+    .hero h1,
+    .hero p.lead,
+    .hero .actions,
+    .hero-card {
+      opacity: 0;
+      animation: fadeUp .9s cubic-bezier(.2, .7, .2, 1) forwards
+    }
+
+    .hero .crumbs {
+      animation-delay: .05s
+    }
+
+    .hero .eyebrow {
+      animation-delay: .15s
+    }
+
+    .hero h1 {
+      animation-delay: .25s
+    }
+
+    .hero p.lead {
+      animation-delay: .4s
+    }
+
+    .hero .actions {
+      animation-delay: .55s
+    }
+
+    .hero-card {
+      animation-delay: .5s
+    }
+
+    .hero-card li .tick {
+      transform: scale(0);
+      animation: pop .5s cubic-bezier(.3, 1.6, .5, 1) forwards
+    }
+
+    .hero-card li:nth-child(1) .tick {
+      animation-delay: 1s
+    }
+
+    .hero-card li:nth-child(2) .tick {
+      animation-delay: 1.15s
+    }
+
+    .hero-card li:nth-child(3) .tick {
+      animation-delay: 1.3s
+    }
+
+    .hero-card li:nth-child(4) .tick {
+      animation-delay: 1.45s
+    }
+
+    /* buttons: shine sweep */
+    .btn {
+      position: relative;
+      overflow: hidden
+    }
+
+    .btn-accent::after,
+    .btn-light::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -60%;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .45), transparent);
+      transform: skewX(-20deg);
+      animation: shine 4.5s ease-in-out infinite
+    }
+
+    .btn:active {
+      transform: scale(.97)
+    }
+
+    /* cards */
+    .card {
+      transform-style: preserve-3d;
+      will-change: transform
+    }
+
+    .card .icon {
+      transition: transform .4s cubic-bezier(.3, 1.6, .5, 1), background .3s, color .3s
+    }
+
+    .card:hover .icon {
+      transform: rotate(-8deg) scale(1.12);
+      background: var(--primary);
+      color: #fff
+    }
+
+    .panel {
+      transition: transform .3s, box-shadow .3s
+    }
+
+    .panel:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 44px rgba(31, 42, 55, .14)
+    }
+
+    .intro .photo img {
+      animation: bob 6s ease-in-out infinite
+    }
+
+    .vcard {
+      transition: transform .3s, box-shadow .3s
+    }
+
+    .vcard:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 44px rgba(31, 42, 55, .14)
+    }
+
+    .rel span {
+      display: inline-block;
+      transition: transform .25s
+    }
+
+    .rel:hover span {
+      transform: translateX(6px)
+    }
+
+    .socials a {
+      transition: .25s
+    }
+
+    .socials a:hover {
+      transform: translateY(-3px)
+    }
+
+    .section-head .tag::before {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      vertical-align: middle;
+      margin-right: 0;
+      transition: width .6s .3s, margin .6s .3s
+    }
+
+    .section-head.in .tag::before,
+    .reveal.in .tag::before {
+      width: 28px;
+      margin-right: 10px
+    }
+
+    @media(max-width:760px) {
+      nav {
+        display: block;
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none
+      }
+
+      nav.open {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important
+      }
+
+      html {
+        scroll-behavior: auto
+      }
+
+      html.js .reveal,
+      .hero .crumbs,
+      .hero .eyebrow,
+      .hero h1,
+      .hero p.lead,
+      .hero .actions,
+      .hero-card {
+        opacity: 1 !important;
+        transform: none !important
+      }
+
+      .hero-card li .tick {
+        transform: none
+      }
+    }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <div class="topbar">
+    <div class="wrap">
+      <span>Women and Family Ascending Association</span>
+      <span><a href="https://www.wafaaorganization.org/client-intake-application/">Client Intake Application</a>
+        &nbsp;·&nbsp; <a href="https://www.wafaaorganization.org/contact/">Contact</a></span>
+    </div>
+  </div>
+
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="https://www.wafaaorganization.org/" aria-label="WAFAA home">
+        <img
+          src="./logo.png"
+          alt="WAFAA logo">
+        <span>WAFAA<small>Women &amp; Family Ascending Association</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Toggle menu"
+        onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+      <nav id="nav" aria-label="Main">
+        <ul>
+          <li><a class="link" href="../../index.html">Home</a></li>
+          <li><a class="link active" href="https://www.wafaaorganization.org/our-services/">Our Services</a></li>
+          <li><a class="link" href="https://www.wafaaorganization.org/about-the-founder/">About Us</a></li>
+          <li><a class="link" href="https://www.wafaaorganization.org/volunteer/">Contribute</a></li>
+          <li><a class="link" href="https://www.wafaaorganization.org/contact/">Contact</a></li>
+          <li><a class="btn btn-accent" href="https://www.wafaaorganization.org/donate/">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <div class="crumbs"><a href="https://www.wafaaorganization.org/">Home</a> &nbsp;/&nbsp; <a
+              href="https://www.wafaaorganization.org/our-services/">Our Services </a> &nbsp;/&nbsp; Parenting Classes
+          </div>
+          <span class="eyebrow">Parenting Classes</span>
+          <h1>Confident parents build stronger families.</h1>
+          <p class="lead">At WAFAA, we understand the pressure that comes with parenthood, especially during times of
+            emotional and financial stress. We are here to guide you as you enter parenthood, or when you run into bumps
+            in the road as a current parent.</p>
+          <div class="actions">
+            <a class="btn btn-accent" href="https://www.wafaaorganization.org/client-intake-application/">Apply for
+              Support</a>
+            <a class="btn btn-ghost" href="https://www.wafaaorganization.org/contact/">Ask a Question</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="What you will learn">
+          <h3>What our classes cover</h3>
+          <ul>
+            <li><span class="tick">✓</span>Developing proper discipline and reward responses</li>
+            <li><span class="tick">✓</span>Maintaining cleanliness and hygiene</li>
+            <li><span class="tick">✓</span>Balancing work and childcare</li>
+            <li><span class="tick">✓</span>Addressing the physical and emotional stress of parenting</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+
+    <!-- INTRO -->
+    <section>
+      <div class="wrap intro">
+        <div class="photo">
+          <img src="https://wafa38260515.files.wordpress.com/2020/07/clipart102186.png?w=480"
+            alt="Illustration of a parent and child">
+        </div>
+        <div>
+          <div class="section-head" style="margin-bottom:20px">
+            <span class="tag">Our approach</span>
+            <h2>Support rooted in real family life</h2>
+          </div>
+          <p>Our shelters often see parents and their children come and go. While they are with us, we help them build
+            the everyday skills that make home a calmer, healthier place for the whole family.</p>
+          <p>Our parenting classes cover those same topics, so every parent in our community can benefit from the
+            guidance we offer in our shelters.</p>
+          <blockquote>Strengthening families through education, to reduce isolation and build connections.</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICS -->
+    <section class="topics" id="topics">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Topics</span>
+          <h2>Four areas where parents tell us they need support</h2>
+          <p>Each topic is practical and focused on what families face day to day.</p>
+        </div>
+        <div class="grid4">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.3 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z" />
+              </svg></div>
+            <h3>Discipline &amp; Rewards</h3>
+            <p>Develop proper discipline and reward responses that guide children with care and consistency.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3c3 4 6 6.5 6 10a6 6 0 0 1-12 0c0-3.500 3-6 6-10z" />
+              </svg></div>
+            <h3>Cleanliness &amp; Hygiene</h3>
+            <p>Maintain cleanliness and hygiene habits that keep your home and your children healthy.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg></div>
+            <h3>Work &amp; Childcare</h3>
+            <p>Find a workable balance between your job and the care your children need.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.8 5.6a5.200 5.200 0 0 0-7.400 0L12 7l-1.400-1.400a5.200 5.200 0 0 0-7.400 7.400L12 21.800l8.800-8.800a5.200 5.200 0 0 0 0-7.400z" />
+              </svg></div>
+            <h3>Parenting Stress</h3>
+            <p>Address the physical and emotional stress of parenting, so you can care for yourself too.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO -->
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Who it's for</span>
+          <h2>Whether you are just starting out or already in the thick of it</h2>
+        </div>
+        <div class="split">
+          <div class="panel">
+            <h3>Entering parenthood</h3>
+            <p>Expecting or new to parenting? We guide you as you enter this new chapter, so you feel prepared rather
+              than overwhelmed.</p>
+          </div>
+          <div class="panel dark">
+            <h3>Hitting bumps in the road</h3>
+            <p>Already a parent and facing a difficult season, perhaps with added emotional or financial pressure? You
+              do not have to handle it alone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section class="videos" id="stories">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Watch</span>
+          <h2>Hear from our community</h2>
+          <p>A client testimony and a recording from The Bridge ART, a community broadcast.</p>
+        </div>
+        <div class="vgrid">
+          <div class="vcard">
+            <div class="frame"><iframe src="https://www.youtube.com/embed/DUsn83Ddixo" title="WAFAA client testimony"
+                loading="lazy" allowfullscreen></iframe></div>
+            <div class="meta">
+              <h3>Client Testimony</h3>
+              <p>In their own words, a client shares their experience with WAFAA.</p>
+            </div>
+          </div>
+          <div class="vcard">
+            <div class="frame"><iframe src="https://www.youtube.com/embed/XIu4vSv2uBw" title="The Bridge ART"
+                loading="lazy" allowfullscreen></iframe></div>
+            <div class="meta">
+              <h3>The Bridge ART</h3>
+              <p>Broadcast recording from March 20 at 9pm EST.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="wrap">
+        <div class="cta">
+          <h2>Ready to take the next step?</h2>
+          <p>Complete our client intake application or get in touch with the team to learn how WAFAA can support your
+            family.</p>
+          <div class="actions">
+            <a class="btn btn-light" href="https://www.wafaaorganization.org/client-intake-application/">Client Intake
+              Application</a>
+            <a class="btn btn-ghost" href="https://www.wafaaorganization.org/contact/">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED -->
+    <section class="related">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:28px">
+          <span class="tag">Explore more</span>
+          <h2>Other WAFAA services</h2>
+        </div>
+        <div class="rel-grid">
+          <a class="rel" href="https://www.wafaaorganization.org/counseling-sessions/">Counseling Sessions
+            <span>→</span></a>
+          <a class="rel" href="https://www.wafaaorganization.org/crisis-intervention-therapy/">Crisis Intervention
+            Therapy <span>→</span></a>
+          <a class="rel" href="https://www.wafaaorganization.org/housing/">Emergency Housing <span>→</span></a>
+          <a class="rel" href="https://www.wafaaorganization.org/food-pantry-shelter/">Food Pantry &amp; Shelter
+            <span>→</span></a>
+          <a class="rel" href="https://www.wafaaorganization.org/legal-assistance/">Legal Assistance <span>→</span></a>
+          <a class="rel" href="https://www.wafaaorganization.org/workshops/">More Services &amp; Workshops
+            <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="fgrid">
+        <div>
+          <h4>WAFAA</h4>
+          <p>Our mission is to strengthen families and the community through education in order to reduce isolation,
+            build connections within and between families, and throughout the community.</p>
+          <div class="socials">
+            <a href="https://www.facebook.com/WomenandFamilyAscendingAssociation/">Facebook</a>
+            <a href="https://www.instagram.com/wafaaorganization/">Instagram</a>
+            <a href="https://twitter.com/WafaaSaad3">Twitter</a>
+            <a href="https://www.linkedin.com/in/wafaasaad/">LinkedIn</a>
+            <a href="https://www.youtube.com/watch?v=XIu4vSv2uBw">YouTube</a>
+          </div>
+        </div>
+        <div>
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="https://www.wafaaorganization.org/parenting-classes/">Parenting Classes</a></li>
+            <li><a href="https://www.wafaaorganization.org/bill-insurance-assistance/">Bill &amp; Insurance
+                Assistance</a></li>
+            <li><a href="https://www.wafaaorganization.org/immigration-paper-work/">Immigration Services</a></li>
+            <li><a href="https://www.wafaaorganization.org/notary-public/">Notary Public</a></li>
+            <li><a href="https://www.wafaaorganization.org/in-home-care/">Senior Care Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get involved</h4>
+          <ul>
+            <li><a href="https://www.wafaaorganization.org/donate/">Donate via PayPal</a></li>
+            <li><a href="https://www.wafaaorganization.org/volunteer/">Volunteer</a></li>
+            <li><a href="https://www.wafaaorganization.org/membership-application/">Membership Application</a></li>
+            <li><a href="https://www.wafaaorganization.org/our-history/">Our History</a></li>
+            <li><a href="https://www.wafaaorganization.org/partnerships/">Partnerships</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">
+        <span>© Women and Family Ascending Association. All rights reserved.</span>
+        <span>Redesign concept</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* 1. Tag elements for scroll reveal (with staggered delays) */
+      function add(sel, cls, step) {
+        document.querySelectorAll(sel).forEach(function (el, i) {
+          el.classList.add('reveal');
+          if (cls) el.classList.add(cls);
+          if (step) el.style.setProperty('--d', (i * step) + 's');
+        });
+      }
+      add('.intro .photo', 'left');
+      add('.intro > div:last-child', 'right');
+      add('.section-head');
+      add('.grid4 .card', 'zoom', 0.12);
+      add('.split .panel', null, 0.15);
+      add('.vcard', 'zoom', 0.15);
+      add('.cta', 'zoom');
+      add('.rel', null, 0.08);
+      add('.fgrid > div', null, 0.12);
+
+      /* 2. Reveal on scroll */
+      var items = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !reduce) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              var el = e.target;
+              el.classList.add('in');
+              io.unobserve(el);
+              // once revealed, hand back the element's own hover transitions
+              el.addEventListener('transitionend', function done(ev) {
+                if (ev.target !== el || ev.propertyName !== 'opacity') return;
+                el.removeEventListener('transitionend', done);
+                el.classList.remove('reveal', 'left', 'right', 'zoom');
+                el.style.removeProperty('--d');
+              });
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        items.forEach(function (el) { io.observe(el); });
+      } else {
+        items.forEach(function (el) { el.classList.add('in'); });
+      }
+
+      /* 3. Scroll progress bar + sticky header state + hero parallax */
+      var bar = document.getElementById('progress');
+      var header = document.querySelector('header.site');
+      var hero = document.querySelector('.hero');
+      var ticking = false;
+      function onScroll() {
+        var y = window.scrollY || document.documentElement.scrollTop;
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.transform = 'scaleX(' + (h > 0 ? y / h : 0) + ')';
+        header.classList.toggle('scrolled', y > 30);
+        if (!reduce && hero && y < hero.offsetHeight + 200) {
+          var inner = hero.querySelector('.wrap');
+          inner.style.transform = 'translateY(' + (y * 0.06) + 'px)';
+        }
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+      }, { passive: true });
+      onScroll();
+
+      /* 4. 3D tilt on topic cards (desktop pointers only) */
+      if (!reduce && window.matchMedia('(hover: hover)').matches) {
+        document.querySelectorAll('.grid4 .card').forEach(function (card) {
+          card.addEventListener('mousemove', function (e) {
+            var r = card.getBoundingClientRect();
+            var x = (e.clientX - r.left) / r.width - 0.5;
+            var y = (e.clientY - r.top) / r.height - 0.5;
+            card.style.transition = 'box-shadow .25s';
+            card.style.transform = 'perspective(700px) rotateX(' + (-y * 8) + 'deg) rotateY(' + (x * 8) + 'deg) translateY(-4px)';
+          });
+          card.addEventListener('mouseleave', function () {
+            card.style.transition = 'transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .25s';
+            card.style.transform = '';
+          });
+        });
+      }
+
+      /* 5. Mobile menu: close after choosing a link or tapping outside */
+      var nav = document.getElementById('nav');
+      nav.addEventListener('click', function (e) { if (e.target.closest('a')) nav.classList.remove('open'); });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('header.site')) nav.classList.remove('open');
+      });
+
+      /* 6. Smooth in-page anchor scrolling with header offset */
+      document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var t = document.querySelector(a.getAttribute('href'));
+          if (!t) return;
+          e.preventDefault();
+          var top = t.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 10;
+          window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
+        });
+      });
+    })();
+  </script>
+
+</body>
+
+</html>
