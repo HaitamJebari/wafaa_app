@@ -1,0 +1,2470 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Counseling Sessions | WAFAA – Professional Guidance & Support</title>
+
+  <meta name="description"
+    content="Discover WAFAA counseling sessions, including anger management, mental health counseling, therapy, wellness sessions and referrals. Confidential and professional support for individuals and families.">
+
+  <meta name="theme-color" content="#171b35">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #1a235c;
+      --muted: #77788b;
+      --bg: #f8f5ef;
+      --card: #fffdf9;
+      --line: rgba(23, 27, 53, .14);
+
+      --primary: #1a235c;
+      --primary-dark: #171b35;
+      --accent: #f25d4d;
+
+      --soft: #eeebfb;
+      --sand: #ded9f5;
+
+      --radius: 18px;
+      --shadow: 0 14px 40px rgba(23, 27, 53, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    h1, h2, h3 {
+      font-family: Fraunces, Georgia, serif;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    /* TOP PROGRESS */
+
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      transform: scaleX(0);
+      transform-origin: left;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      z-index: 2000;
+    }
+
+    /* TOPBAR */
+
+    .topbar {
+      background: var(--primary-dark);
+      color: #eeebfb;
+      font-size: .85rem;
+    }
+
+    .topbar .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 0;
+      flex-wrap: wrap;
+    }
+
+    .topbar a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* HEADER */
+
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 245, 239, .94);
+      backdrop-filter: blur(12px);
+      transition: box-shadow .3s;
+    }
+
+    header.site.scrolled {
+      box-shadow: 0 8px 24px rgba(23, 27, 53, .08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 20px;
+      transition: padding .3s;
+    }
+
+    header.site.scrolled .nav {
+      padding: 8px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      height: 46px;
+      width: auto;
+      border-radius: 8px;
+      transition: height .3s;
+    }
+
+    header.site.scrolled .brand img {
+      height: 38px;
+    }
+
+    .brand span {
+      font-family: Fraunces, serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .brand small {
+      display: block;
+      font-family: Inter, sans-serif;
+      font-size: .68rem;
+      font-weight: 500;
+      color: var(--muted);
+      line-height: 1.3;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 6px;
+    }
+
+    nav a.link {
+      display: block;
+      padding: 9px 13px;
+      border-radius: 999px;
+      font-size: .92rem;
+      font-weight: 500;
+      color: var(--ink);
+      transition: .25s;
+    }
+
+    nav a.link:hover,
+    nav a.link.active {
+      background: var(--soft);
+      color: var(--primary-dark);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: .95rem;
+      border: 2px solid transparent;
+      transition: .3s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-accent:hover {
+      background: #d94c3e;
+      transform: translateY(-3px);
+    }
+
+    .btn-ghost {
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    .btn-ghost:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--primary-dark);
+    }
+
+    .btn-light:hover {
+      background: var(--soft);
+      transform: translateY(-3px);
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        100deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+      );
+      transform: skewX(-20deg);
+      transition: left .7s;
+    }
+
+    .btn:hover::after {
+      left: 150%;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(
+        135deg,
+        #171b35 0%,
+        #1a235c 55%,
+        #293052 100%
+      );
+      color: white;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 430px;
+      height: 430px;
+      top: -160px;
+      right: -100px;
+      background: rgba(242, 93, 77, .18);
+      animation: floatA 14s ease-in-out infinite;
+    }
+
+    .hero::after {
+      width: 340px;
+      height: 340px;
+      bottom: -180px;
+      left: -90px;
+      background: rgba(222, 217, 245, .12);
+      animation: floatB 17s ease-in-out infinite;
+    }
+
+    .hero .wrap {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 55px;
+      padding: 88px 0 96px;
+    }
+
+    .crumbs {
+      font-size: .88rem;
+      color: #e3e2f2;
+      margin-bottom: 20px;
+    }
+
+    .crumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 7px 15px;
+      border-radius: 999px;
+      font-size: .77rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 600;
+      margin-bottom: 22px;
+      max-width: 650px;
+    }
+
+    .hero h1 span {
+      color: #f7c2a8;
+    }
+
+    .hero .lead {
+      color: #e3e2f2;
+      font-size: 1.08rem;
+      max-width: 58ch;
+      margin-bottom: 30px;
+    }
+
+    .hero .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero .btn-ghost {
+      border-color: rgba(255,255,255,.7);
+      color: white;
+    }
+
+    .hero .btn-ghost:hover {
+      background: white;
+      color: var(--primary-dark);
+    }
+
+    .hero-card {
+      padding: 34px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.11);
+      border: 1px solid rgba(255,255,255,.25);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 50px rgba(0,0,0,.08);
+    }
+
+    .hero-card .number {
+      font-family: Fraunces, serif;
+      font-size: 4rem;
+      line-height: 1;
+      color: #f7c2a8;
+      margin-bottom: 12px;
+    }
+
+    .hero-card h3 {
+      font-family: Inter, sans-serif;
+      color: white;
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      color: #e3e2f2;
+      font-size: .96rem;
+      margin-bottom: 22px;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 13px;
+    }
+
+    .hero-card li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: #eeebfb;
+      font-size: .94rem;
+    }
+
+    .tick {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      font-size: .75rem;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 88px 0;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+
+    .section-head .tag {
+      display: block;
+      color: var(--accent);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      margin-bottom: 15px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    /* INTRO */
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .intro-visual {
+      position: relative;
+      min-height: 390px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--sand);
+      box-shadow: var(--shadow);
+    }
+
+    .intro-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 390px;
+      object-fit: cover;
+    }
+
+    .visual-overlay {
+      position: absolute;
+      inset: auto 20px 20px;
+      background: rgba(23, 27, 53, .92);
+      color: white;
+      padding: 22px;
+      border-radius: 14px;
+      backdrop-filter: blur(8px);
+    }
+
+    .visual-overlay strong {
+      display: block;
+      font-family: Fraunces, serif;
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+    }
+
+    .visual-overlay span {
+      color: #e3e2f2;
+      font-size: .9rem;
+    }
+
+    .intro-content .section-head {
+      margin-bottom: 20px;
+    }
+
+    .intro-content > p {
+      color: var(--muted);
+      font-size: 1.04rem;
+      margin-bottom: 17px;
+    }
+
+    .intro blockquote {
+      border-left: 4px solid var(--accent);
+      padding: 8px 0 8px 20px;
+      margin-top: 25px;
+      font-family: Fraunces, serif;
+      font-size: 1.3rem;
+      color: var(--primary-dark);
+    }
+
+    /* EXPERIENCE STRIP */
+
+    .experience {
+      padding: 0 0 88px;
+    }
+
+    .experience-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .experience-item {
+      text-align: center;
+      padding: 30px 22px;
+      border-right: 1px solid var(--line);
+    }
+
+    .experience-item:last-child {
+      border-right: 0;
+    }
+
+    .experience-item strong {
+      display: block;
+      font-family: Fraunces, serif;
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .experience-item span {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: var(--sand);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      position: relative;
+      background: var(--card);
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform .35s, box-shadow .35s;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--soft);
+      right: -40px;
+      bottom: -45px;
+      transition: transform .4s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 45px rgba(23, 27, 53, .13);
+    }
+
+    .service-card:hover::after {
+      transform: scale(2);
+    }
+
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--soft);
+      color: var(--primary);
+      margin-bottom: 22px;
+      transition: .35s;
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--primary);
+      color: white;
+      transform: rotate(-7deg) scale(1.08);
+    }
+
+    .service-icon svg {
+      width: 29px;
+      height: 29px;
+    }
+
+    .service-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      position: relative;
+      z-index: 1;
+      color: var(--muted);
+      font-size: .96rem;
+    }
+
+    .service-card .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary-dark);
+      font-weight: 600;
+      margin-top: 22px;
+      font-size: .9rem;
+    }
+
+    .service-link span {
+      color: var(--accent);
+      transition: transform .3s;
+    }
+
+    .service-card:hover .service-link span {
+      transform: translateX(5px);
+    }
+
+    /* APPROACH */
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .approach-card {
+      border-radius: var(--radius);
+      padding: 38px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      transition: .3s;
+    }
+
+    .approach-card.dark {
+      background: var(--primary-dark);
+      border-color: transparent;
+      color: white;
+    }
+
+    .approach-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 44px rgba(23, 27, 53, .13);
+    }
+
+    .approach-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+
+    .approach-card.dark h3 {
+      color: white;
+    }
+
+    .approach-card p {
+      color: var(--muted);
+    }
+
+    .approach-card.dark p {
+      color: #d5d4e5;
+    }
+
+    .approach-card .mini-label {
+      display: inline-block;
+      padding: 6px 12px;
+      background: var(--soft);
+      color: var(--primary-dark);
+      border-radius: 999px;
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 20px;
+    }
+
+    .approach-card.dark .mini-label {
+      background: rgba(255,255,255,.14);
+      color: white;
+    }
+
+    /* CONFIDENTIALITY */
+
+    .confidential {
+      background: var(--card);
+    }
+
+    .confidential-inner {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .confidential-art {
+      min-height: 300px;
+      border-radius: 22px;
+      background: linear-gradient(
+        135deg,
+        var(--soft),
+        #f8f5ef
+      );
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .confidential-art svg {
+      width: 150px;
+      height: 150px;
+      color: var(--primary);
+      animation: bob 5s ease-in-out infinite;
+    }
+
+    .confidential-content h2 {
+      font-size: clamp(2rem, 3.5vw, 2.7rem);
+      margin-bottom: 18px;
+    }
+
+    .confidential-content > p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .confidential-points {
+      display: grid;
+      gap: 14px;
+    }
+
+    .confidential-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .confidential-point span {
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--soft);
+      color: var(--primary);
+      font-size: .8rem;
+    }
+
+    /* VIDEOS */
+
+    .videos {
+      background: var(--bg);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
+
+    .video-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 44px rgba(23, 27, 53, .14);
+    }
+
+    .video-frame {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #171b35;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-meta {
+      padding: 22px 24px;
+    }
+
+    .video-meta h3 {
+      font-size: 1.2rem;
+      margin-bottom: 7px;
+    }
+
+    .video-meta p {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    /* CTA */
+
+    .cta-section {
+      padding: 88px 0;
+    }
+
+    .cta {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 70px 45px;
+      border-radius: 28px;
+      background: linear-gradient(
+        135deg,
+        var(--accent),
+        #d94c3e
+      );
+      box-shadow: var(--shadow);
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.1);
+      top: -180px;
+      left: -70px;
+    }
+
+    .cta::after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.1);
+      bottom: -170px;
+      right: -60px;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta h2 {
+      color: white;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #fff3ea;
+      font-size: 1.06rem;
+      max-width: 60ch;
+      margin: 0 auto 30px;
+    }
+
+    .cta .actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .cta .btn-ghost {
+      border-color: white;
+      color: white;
+    }
+
+    .cta .btn-ghost:hover {
+      background: white;
+      color: var(--primary-dark);
+    }
+
+    /* RELATED SERVICES */
+
+    .related {
+      padding-top: 0;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .related-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 21px 24px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--card);
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .related-link:hover {
+      border-color: var(--primary);
+      color: var(--primary-dark);
+      transform: translateX(4px);
+      box-shadow: var(--shadow);
+    }
+
+    .related-link span {
+      color: var(--accent);
+      font-size: 1.2rem;
+      transition: transform .3s;
+    }
+
+    .related-link:hover span {
+      transform: translateX(5px);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #171b35;
+      color: #d5d4e5;
+      padding: 65px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    footer h4 {
+      color: white;
+      font-size: .98rem;
+      margin-bottom: 16px;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    footer p {
+      font-size: .93rem;
+      max-width: 43ch;
+    }
+
+    footer ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      font-size: .93rem;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .socials a {
+      padding: 7px 13px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      font-size: .82rem;
+      transition: .25s;
+    }
+
+    .socials a:hover {
+      background: var(--soft);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    .copy {
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: .84rem;
+    }
+
+    .copy a:hover {
+      color: white;
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatA {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(-25px, 30px);
+      }
+    }
+
+    @keyframes floatB {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(30px, -25px);
+      }
+    }
+
+    @keyframes bob {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .hero .crumbs,
+    .hero .eyebrow,
+    .hero h1,
+    .hero .lead,
+    .hero .actions,
+    .hero-card {
+      opacity: 0;
+      animation: fadeUp .85s cubic-bezier(.2,.7,.2,1) forwards;
+    }
+
+    .hero .crumbs { animation-delay: .05s; }
+    .hero .eyebrow { animation-delay: .15s; }
+    .hero h1 { animation-delay: .25s; }
+    .hero .lead { animation-delay: .4s; }
+    .hero .actions { animation-delay: .55s; }
+    .hero-card { animation-delay: .45s; }
+
+    /* SCROLL REVEAL */
+
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity .8s cubic-bezier(.2,.7,.2,1),
+        transform .8s cubic-bezier(.2,.7,.2,1);
+      transition-delay: var(--d, 0s);
+    }
+
+    html.js .reveal.left {
+      transform: translateX(-40px);
+    }
+
+    html.js .reveal.right {
+      transform: translateX(40px);
+    }
+
+    html.js .reveal.zoom {
+      transform: scale(.94);
+    }
+
+    html.js .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width: 1000px) {
+      .hero .wrap {
+        gap: 35px;
+      }
+
+      .hero .wrap,
+      .intro,
+      .confidential-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width: 760px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav {
+        position: relative;
+      }
+
+      nav {
+        position: absolute;
+        top: 100%;
+        left: -20px;
+        right: -20px;
+        display: block;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+        padding: 12px 20px 20px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: .3s;
+      }
+
+      nav.open {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        pointer-events: auto;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      nav a.link {
+        display: block;
+      }
+
+      nav .btn {
+        width: 100%;
+        margin-top: 5px;
+      }
+
+      .brand small {
+        display: none;
+      }
+
+      .hero .wrap,
+      .intro,
+      .confidential-inner,
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero .wrap {
+        padding: 65px 0 75px;
+        gap: 38px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.4rem, 9vw, 3.3rem);
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .intro-visual,
+      .intro-visual img {
+        min-height: 300px;
+      }
+
+      .service-grid,
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .experience-item:last-child {
+        border-bottom: 0;
+      }
+
+      .related-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        padding: 48px 23px;
+      }
+
+      .approach-card {
+        padding: 30px;
+      }
+    }
+
+    @media(max-width: 480px) {
+      .wrap {
+        width: calc(100% - 32px);
+      }
+
+      .topbar .wrap {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand span {
+        font-size: 1.1rem;
+      }
+
+      .brand img {
+        height: 40px;
+      }
+
+      .hero .actions,
+      .cta .actions {
+        flex-direction: column;
+      }
+
+      .hero .actions .btn,
+      .cta .actions .btn {
+        width: 100%;
+      }
+
+      .hero-card {
+        padding: 26px 22px;
+      }
+
+      .service-card {
+        padding: 26px 22px;
+      }
+
+      .section-head h2 {
+        font-size: 2rem;
+      }
+
+      .copy {
+        flex-direction: column;
+      }
+    }
+
+    /* ACCESSIBILITY */
+
+    @media(prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      html.js .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .hero .crumbs,
+      .hero .eyebrow,
+      .hero h1,
+      .hero .lead,
+      .hero .actions,
+      .hero-card {
+        opacity: 1 !important;
+      }
+    }
+  </style>
+
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
+</head>
+
+<body>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- TOPBAR -->
+
+  <div class="topbar">
+    <div class="wrap">
+      <span>Women and Family Ascending Association</span>
+
+      <span>
+        <a href="https://www.wafaaorganization.org/client-intake-application/">
+          Client Intake Application
+        </a>
+        &nbsp;·&nbsp;
+        <a href="https://www.wafaaorganization.org/contact/">
+          Contact
+        </a>
+      </span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+
+  <header class="site">
+    <div class="wrap nav">
+
+      <a class="brand"
+        href="https://www.wafaaorganization.org/"
+        aria-label="WAFAA home">
+
+        <img src="./logo.png" alt="WAFAA logo">
+
+        <span>
+          WAFAA
+          <small>Women &amp; Family Ascending Association</small>
+        </span>
+      </a>
+
+      <button class="menu-btn"
+        id="menuBtn"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="nav">
+        ☰
+      </button>
+
+      <nav id="nav" aria-label="Main navigation">
+        <ul>
+          <li>
+            <a class="link" href="../../index.html">Home</a>
+          </li>
+
+          <li>
+            <a class="link active"
+              href="https://www.wafaaorganization.org/our-services/">
+              Our Services
+            </a>
+          </li>
+
+          <li>
+            <a class="link"
+              href="https://www.wafaaorganization.org/about-the-founder/">
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a class="link"
+              href="https://www.wafaaorganization.org/volunteer/">
+              Contribute
+            </a>
+          </li>
+
+          <li>
+            <a class="link"
+              href="https://www.wafaaorganization.org/contact/">
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a class="btn btn-accent"
+              href="https://www.wafaaorganization.org/donate/">
+              Donate
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="wrap">
+
+        <div class="hero-content">
+
+          <div class="crumbs">
+            <a href="https://www.wafaaorganization.org/">Home</a>
+            &nbsp;/&nbsp;
+            <a href="https://www.wafaaorganization.org/our-services/">
+              Our Services
+            </a>
+            &nbsp;/&nbsp;
+            Counseling Sessions
+          </div>
+
+          <span class="eyebrow">Counseling &amp; Wellness</span>
+
+          <h1>
+            Find clarity, build confidence, and
+            <span>move forward.</span>
+          </h1>
+
+          <p class="lead">
+            Life can bring emotional challenges, difficult relationships
+            and moments of uncertainty. At WAFAA, we provide confidential
+            and professional counseling support to help individuals work
+            through challenges and regain a sense of control in their lives.
+          </p>
+
+          <div class="actions">
+
+            <a class="btn btn-accent"
+              href="https://www.wafaaorganization.org/client-intake-application/">
+              Request Support &nbsp; →
+            </a>
+
+            <a class="btn btn-ghost"
+              href="https://www.wafaaorganization.org/contact/">
+              Contact Our Team
+            </a>
+
+          </div>
+
+        </div>
+
+        <aside class="hero-card">
+
+          <div class="number">35+</div>
+
+          <h3>Years of experience</h3>
+
+          <p>
+            Our founder, Wafaa Saad, brings over 35 years of experience
+            in anger management and mental health therapy.
+          </p>
+
+          <ul>
+
+            <li>
+              <span class="tick">✓</span>
+              Anger management counseling
+            </li>
+
+            <li>
+              <span class="tick">✓</span>
+              Mental health counseling and therapy
+            </li>
+
+            <li>
+              <span class="tick">✓</span>
+              Personal wellness sessions
+            </li>
+
+            <li>
+              <span class="tick">✓</span>
+              Professional guidance and referrals
+            </li>
+
+          </ul>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+
+
+    
+    <!-- INTRO -->
+
+    <section>
+
+      <div class="wrap intro">
+
+        <div class="intro-visual reveal left">
+
+          <img
+            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
+            alt="Supportive conversation in a professional setting"
+            loading="lazy">
+
+          <div class="visual-overlay">
+            <strong>You are not alone.</strong>
+            <span>Support, understanding and guidance at every step.</span>
+          </div>
+
+        </div>
+
+        <div class="intro-content reveal right">
+
+          <div class="section-head">
+
+            <span class="tag">About our counseling</span>
+
+            <h2>
+              A supportive space to work through life's challenges
+            </h2>
+
+          </div>
+
+          <p>
+            Our founder, Wafaa Saad, has over 35 years of experience
+            in anger management and mental health therapy.
+          </p>
+
+          <p>
+            Through individual sessions or a series of sessions,
+            she works with clients to address personal conflicts,
+            develop inner confidence and regain control of their lives.
+          </p>
+
+          <p>
+            Supported by a team of dedicated and optimistic associates,
+            WAFAA provides guidance throughout the healing process,
+            maintaining a confidential and professional relationship
+            with clients.
+          </p>
+
+          <blockquote>
+            Every step toward understanding yourself is a step
+            toward a stronger future.
+          </blockquote>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+
+    <section class="experience">
+
+      <div class="wrap">
+
+        <div class="experience-inner reveal">
+
+          <div class="experience-item">
+            <strong>35+</strong>
+            <span>Years of founder experience</span>
+          </div>
+
+          <div class="experience-item">
+            <strong>4</strong>
+            <span>Areas of counseling support</span>
+          </div>
+
+          <div class="experience-item">
+            <strong>1:1</strong>
+            <span>Individual support sessions</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <span class="tag">Our services</span>
+
+          <h2>
+            Counseling support designed around your needs
+          </h2>
+
+          <p>
+            WAFAA offers different types of counseling and wellness
+            support to help individuals navigate personal challenges
+            and work toward positive change.
+          </p>
+
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+
+              <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+
+                <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+                <path d="M9 12l2 2 4-4"/>
+
+              </svg>
+
+            </div>
+
+            <h3>Anger Management</h3>
+
+            <p>
+              Explore the stages and types of anger, understand
+              the mental, physical and emotional effects of uncontrolled
+              anger, and develop greater awareness through empathy
+              and self-care.
+            </p>
+
+            <a class="service-link" href="#contact">
+              Learn how to get started <span>→</span>
+            </a>
+
+          </article>
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+
+              <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+
+                <path d="M12 3a9 9 0 1 0 9 9"/>
+                <path d="M12 7v5l3 2"/>
+                <path d="M16 3h5v5"/>
+
+              </svg>
+
+            </div>
+
+            <h3>Short-Term Mental Health Counseling</h3>
+
+            <p>
+              Receive focused counseling support to explore immediate
+              concerns, navigate difficult situations and work toward
+              greater emotional clarity.
+            </p>
+
+            <a class="service-link" href="#contact">
+              Learn how to get started <span>→</span>
+            </a>
+
+          </article>
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+
+              <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+
+                <path d="M12 21s-8-4.5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 6.5-8 11-8 11z"/>
+                <path d="M8 12h8"/>
+                <path d="M12 8v8"/>
+
+              </svg>
+
+            </div>
+
+            <h3>Long-Term Mental Health Therapy</h3>
+
+            <p>
+              Explore ongoing therapy support for longer-term personal
+              and emotional challenges, with referrals available
+              when additional assistance is needed.
+            </p>
+
+            <a class="service-link" href="#contact">
+              Learn how to get started <span>→</span>
+            </a>
+
+          </article>
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+
+              <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+
+                <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+                <path d="M8 12s1.5-2 4-2 4 2 4 2"/>
+                <path d="M12 10v5"/>
+
+              </svg>
+
+            </div>
+
+            <h3>Wellness Sessions</h3>
+
+            <p>
+              Make space for personal well-being, self-awareness
+              and positive habits that support a healthier
+              relationship with yourself and others.
+            </p>
+
+            <a class="service-link" href="#contact">
+              Learn how to get started <span>→</span>
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- OUR APPROACH -->
+
+    <section>
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <span class="tag">Our approach</span>
+
+          <h2>
+            Guidance built around understanding and trust
+          </h2>
+
+          <p>
+            We believe that every person's experience is different.
+            Our approach focuses on creating a professional and
+            supportive environment where individuals can work
+            toward positive change.
+          </p>
+
+        </div>
+
+        <div class="approach-grid">
+
+          <article class="approach-card reveal left">
+
+            <span class="mini-label">Personal growth</span>
+
+            <h3>Build confidence and self-understanding</h3>
+
+            <p>
+              Work through personal conflicts, explore emotional
+              challenges and develop a stronger understanding
+              of yourself and your needs.
+            </p>
+
+          </article>
+
+          <article class="approach-card dark reveal right">
+
+            <span class="mini-label">Ongoing guidance</span>
+
+            <h3>You do not have to navigate everything alone</h3>
+
+            <p>
+              With guidance from Wafaa Saad and the WAFAA team,
+              clients can receive support throughout their
+              counseling and wellness journey.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONFIDENTIALITY -->
+
+    <section class="confidential">
+
+      <div class="wrap confidential-inner">
+
+        <div class="confidential-art reveal left">
+
+          <svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.1"
+            stroke-linecap="round" stroke-linejoin="round">
+
+            <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+
+            <path d="M9 12l2 2 4-4"/>
+
+            <circle cx="12" cy="11" r="3.5"
+              stroke-dasharray="2 2"/>
+
+          </svg>
+
+        </div>
+
+        <div class="confidential-content reveal right">
+
+          <span class="tag">A relationship built on trust</span>
+
+          <h2>
+            Your journey deserves respect, care and confidentiality
+          </h2>
+
+          <p>
+            We understand that reaching out for counseling can
+            be a personal decision. WAFAA emphasizes maintaining
+            a strictly confidential and professional relationship
+            with its clients.
+          </p>
+
+          <div class="confidential-points">
+
+            <div class="confidential-point">
+              <span>✓</span>
+              A professional and supportive relationship
+            </div>
+
+            <div class="confidential-point">
+              <span>✓</span>
+              Respect for your personal experiences
+            </div>
+
+            <div class="confidential-point">
+              <span>✓</span>
+              Guidance throughout your counseling process
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- VIDEOS -->
+
+    <section class="videos" id="stories">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <span class="tag">Watch &amp; discover</span>
+
+          <h2>
+            Hear from the WAFAA community
+          </h2>
+
+          <p>
+            Explore community stories and recordings that
+            highlight the work and mission of WAFAA.
+          </p>
+
+        </div>
+
+        <div class="video-grid">
+
+          <article class="video-card reveal zoom">
+
+            <div class="video-frame">
+
+              <iframe
+                src="https://www.youtube.com/embed/DUsn83Ddixo"
+                title="WAFAA client testimony"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+
+            </div>
+
+            <div class="video-meta">
+
+              <h3>Client Testimony</h3>
+
+              <p>
+                A member of the WAFAA community shares their
+                personal experience.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="video-card reveal zoom">
+
+            <div class="video-frame">
+
+              <iframe
+                src="https://www.youtube.com/embed/XIu4vSv2uBw"
+                title="The Bridge ART community broadcast"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+
+            </div>
+
+            <div class="video-meta">
+
+              <h3>The Bridge ART</h3>
+
+              <p>
+                Community broadcast recording from March 20
+                at 9 PM EST.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta-section" id="contact">
+
+      <div class="wrap">
+
+        <div class="cta reveal zoom">
+
+          <div class="cta-content">
+
+            <h2>
+              Taking the first step can make a difference.
+            </h2>
+
+            <p>
+              If you would like to learn more about our counseling
+              sessions, contact WAFAA or complete the client intake
+              application. Our team is here to provide further information
+              about the support available.
+            </p>
+
+            <div class="actions">
+
+              <a class="btn btn-light"
+                href="https://www.wafaaorganization.org/client-intake-application/">
+                Client Intake Application &nbsp; →
+              </a>
+
+              <a class="btn btn-ghost"
+                href="https://www.wafaaorganization.org/contact/">
+                Contact WAFAA
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- RELATED SERVICES -->
+
+    <section class="related">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <span class="tag">Explore more</span>
+
+          <h2>Discover other WAFAA services</h2>
+
+        </div>
+
+        <div class="related-grid">
+
+          <a class="related-link reveal"
+            href="https://www.wafaaorganization.org/parenting-classes/">
+            Parenting Classes <span>→</span>
+          </a>
+
+          <a class="related-link reveal"
+            href="https://www.wafaaorganization.org/crisis-intervention-therapy/">
+            Crisis Intervention Therapy <span>→</span>
+          </a>
+
+          <a class="related-link reveal"
+            href="https://www.wafaaorganization.org/housing/">
+            Emergency Housing <span>→</span>
+          </a>
+
+          <a class="related-link reveal"
+            href="https://www.wafaaorganization.org/food-pantry-shelter/">
+            Food Pantry &amp; Shelter <span>→</span>
+          </a>
+
+          <a class="related-link reveal"
+            href="https://www.wafaaorganization.org/legal-assistance/">
+            Legal Assistance <span>→</span>
+          </a>
+
+          <a class="related-link reveal"
+            href="https://www.wafaaorganization.org/workshops/">
+            More Services &amp; Workshops <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="wrap">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h4>WAFAA</h4>
+
+          <p>
+            Our mission is to strengthen families and the community
+            through education in order to reduce isolation, build
+            connections within and between families, and throughout
+            the community.
+          </p>
+
+          <div class="socials">
+
+            <a href="https://www.facebook.com/WomenandFamilyAscendingAssociation/">
+              Facebook
+            </a>
+
+            <a href="https://www.instagram.com/wafaaorganization/">
+              Instagram
+            </a>
+
+            <a href="https://twitter.com/WafaaSaad3">
+              Twitter
+            </a>
+
+            <a href="https://www.linkedin.com/in/wafaasaad/">
+              LinkedIn
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=XIu4vSv2uBw">
+              YouTube
+            </a>
+
+          </div>
+
+        </div>
+
+        <div>
+
+          <h4>Our Services</h4>
+
+          <ul>
+
+            <li>
+              <a href="https://www.wafaaorganization.org/parenting-classes/">
+                Parenting Classes
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.wafaaorganization.org/counseling-sessions/">
+                Counseling Sessions
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.wafaaorganization.org/bill-insurance-assistance/">
+                Bill &amp; Insurance Assistance
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.wafaaorganization.org/immigration-paper-work/">
+                Immigration Services
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.wafaaorganization.org/in-home-care/">
+                Senior Care Services
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div>
+
+          <h4>Get involved</h4>
+
+          <ul>
+
+            <li>
+              <a href="https://www.wafaaorganization.org/donate/">
+                Donate via PayPal
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.wafaaorganization.org/volunteer/">
+                Volunteer
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.wafaaorganization.org/membership-application/">
+                Membership Application
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.wafaaorganization.org/our-history/">
+                Our History
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.wafaaorganization.org/partnerships/">
+                Partnerships
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copy">
+
+        <span>
+          © <span id="year"></span>
+          Women and Family Ascending Association. All rights reserved.
+        </span>
+
+        <a href="#top">Back to top ↑</a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    (function () {
+
+      const reduceMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      ).matches;
+
+      /* MOBILE MENU */
+
+      const nav = document.getElementById('nav');
+      const menuBtn = document.getElementById('menuBtn');
+
+      function closeMenu() {
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '☰';
+      }
+
+      menuBtn.addEventListener('click', function () {
+
+        const isOpen = nav.classList.toggle('open');
+
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+        menuBtn.textContent = isOpen ? '✕' : '☰';
+
+      });
+
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('click', function (e) {
+
+        if (!e.target.closest('header.site')) {
+          closeMenu();
+        }
+
+      });
+
+      window.addEventListener('resize', function () {
+
+        if (window.innerWidth > 760) {
+          closeMenu();
+        }
+
+      });
+
+      /* SCROLL REVEAL */
+
+      function addReveal(selector, direction, step) {
+
+        document.querySelectorAll(selector).forEach(function (el, i) {
+
+          el.classList.add('reveal');
+
+          if (direction) {
+            el.classList.add(direction);
+          }
+
+          if (step) {
+            el.style.setProperty('--d', (i * step) + 's');
+          }
+
+        });
+
+      }
+
+      addReveal('.intro-visual', 'left');
+      addReveal('.intro-content', 'right');
+      addReveal('.section-head');
+      addReveal('.experience-inner');
+      addReveal('.service-card', 'zoom', .12);
+      addReveal('.approach-card', null, .15);
+      addReveal('.confidential-art', 'left');
+      addReveal('.confidential-content', 'right');
+      addReveal('.video-card', 'zoom', .15);
+      addReveal('.cta', 'zoom');
+      addReveal('.related-link', null, .08);
+      addReveal('.footer-grid > div', null, .12);
+
+      const revealItems = document.querySelectorAll('.reveal');
+
+      if ('IntersectionObserver' in window && !reduceMotion) {
+
+        const observer = new IntersectionObserver(function (entries) {
+
+          entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add('in');
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        }, {
+          threshold: .12,
+          rootMargin: '0px 0px -35px 0px'
+        });
+
+        revealItems.forEach(function (el) {
+          observer.observe(el);
+        });
+
+      } else {
+
+        revealItems.forEach(function (el) {
+          el.classList.add('in');
+        });
+
+      }
+
+      /* PROGRESS BAR + STICKY HEADER */
+
+      const progress = document.getElementById('progress');
+      const header = document.querySelector('header.site');
+
+      let ticking = false;
+
+      function onScroll() {
+
+        const scrollY = window.scrollY;
+
+        const totalHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+
+        const percentage = totalHeight > 0
+          ? scrollY / totalHeight
+          : 0;
+
+        progress.style.transform = 'scaleX(' + percentage + ')';
+
+        header.classList.toggle('scrolled', scrollY > 30);
+
+        ticking = false;
+
+      }
+
+      window.addEventListener('scroll', function () {
+
+        if (!ticking) {
+          requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+
+      }, { passive: true });
+
+      onScroll();
+
+      /* 3D SERVICE CARD TILT */
+
+      if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
+
+        document.querySelectorAll('.service-card').forEach(function (card) {
+
+          card.addEventListener('mousemove', function (e) {
+
+            const rect = card.getBoundingClientRect();
+
+            const x = (e.clientX - rect.left) / rect.width - .5;
+            const y = (e.clientY - rect.top) / rect.height - .5;
+
+            card.style.transform =
+              'perspective(800px) rotateX(' + (-y * 5) +
+              'deg) rotateY(' + (x * 5) +
+              'deg) translateY(-5px)';
+
+          });
+
+          card.addEventListener('mouseleave', function () {
+
+            card.style.transform = '';
+
+          });
+
+        });
+
+      }
+
+      /* SMOOTH ANCHOR SCROLL */
+
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
+        link.addEventListener('click', function (e) {
+
+          const target = document.querySelector(
+            link.getAttribute('href')
+          );
+
+          if (!target) return;
+
+          e.preventDefault();
+
+          const offset =
+            target.getBoundingClientRect().top +
+            window.scrollY -
+            header.offsetHeight -
+            12;
+
+          window.scrollTo({
+            top: offset,
+            behavior: reduceMotion ? 'auto' : 'smooth'
+          });
+
+        });
+
+      });
+
+      /* AUTOMATIC COPYRIGHT YEAR */
+
+      document.getElementById('year').textContent =
+        new Date().getFullYear();
+
+    })();
+
+  </script>
+
+</body>
+</html>

@@ -687,300 +687,7 @@
   }
 
 
-  /* =========================== HERO SECTION ============================== */
-  .hero {
-    position: relative;
-    min-height: 650px;
-    overflow: hidden;
-    background: var(--ink);
-    color: #fff;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(105deg, rgba(23, 27, 53, 1) 0%, rgba(23, 27, 53, .98) 52%, rgba(40, 44, 82, .86) 100%);
-  }
-
-  .hero__glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(2px);
-    pointer-events: none;
-  }
-
-  .hero__glow--one {
-    width: 490px;
-    height: 490px;
-    right: -130px;
-    top: -190px;
-    border: 1px solid rgba(222, 217, 245, .18);
-    box-shadow: 0 0 0 34px rgba(222, 217, 245, .03), 0 0 0 84px rgba(222, 217, 245, .025);
-  }
-
-  .hero__glow--two {
-    width: 260px;
-    height: 260px;
-    left: 47%;
-    bottom: -172px;
-    background: rgba(242, 93, 77, .13);
-  }
-
-  .hero__grid {
-    min-height: 650px;
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: minmax(0, .92fr) minmax(440px, .9fr);
-    align-items: center;
-    gap: 76px;
-  }
-
-  .hero__content {
-    padding: 38px 0 67px;
-  }
-
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    color: var(--coral);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: .16em;
-    line-height: 1.2;
-    text-transform: uppercase;
-  }
-
-  .eyebrow--light {
-    color: var(--peach);
-  }
-
-  .eyebrow__line {
-    display: inline-block;
-    width: 29px;
-    height: 1px;
-    background: currentColor;
-  }
-
-  .hero h1,
-  .section-heading h2,
-  .mission__quote p,
-  .founder h2,
-  .pantry h2,
-  .contact h2 {
-    margin: 23px 0 20px;
-    font-family: var(--serif);
-    font-size: clamp(52px, 6vw, 82px);
-    font-weight: 400;
-    line-height: .94;
-    letter-spacing: -.045em;
-  }
-
-  .hero h1 em,
-  .section-heading h2 em,
-  .founder h2 em,
-  .pantry h2 em,
-  .contact h2 em {
-    color: var(--coral);
-    font-style: normal;
-  }
-
-  .hero__lede {
-    max-width: 480px;
-    color: rgba(255, 255, 255, .7);
-    font-size: 17px;
-    line-height: 1.65;
-  }
-
-  .hero__actions {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 32px;
-  }
-
-  .hero__microcopy {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    margin-top: 27px;
-    color: rgba(255, 255, 255, .54);
-    font-size: 11px;
-  }
-
-  .hero__microcopy svg {
-    color: var(--peach);
-  }
-
-  .hero-visual {
-    position: relative;
-    height: 490px;
-  }
-
-  .hero-visual__backdrop {
-    position: absolute;
-    width: 78%;
-    height: 80%;
-    right: 3%;
-    top: 12%;
-    border: 1px solid rgba(255, 255, 255, .2);
-    transform: rotate(5deg);
-  }
-
-  .hero-visual__main {
-    position: absolute;
-    width: 75%;
-    height: 83%;
-    top: 2%;
-    right: 12%;
-    overflow: hidden;
-    border-radius: 2px;
-    transform: rotate(-2.5deg);
-    box-shadow: 0 26px 55px rgba(0, 0, 0, .28);
-  }
-
-  .hero-visual__main::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 37%, rgba(17, 20, 42, .84) 100%);
-  }
-
-  .hero-visual__main img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: saturate(.78) contrast(1.05);
-  }
-
-  .hero-visual__label {
-    position: absolute;
-    z-index: 1;
-    left: 26px;
-    bottom: 24px;
-    color: rgba(255, 255, 255, .75);
-    font-family: var(--serif);
-    font-size: 19px;
-    line-height: 1.05;
-  }
-
-  .hero-visual__label strong {
-    color: #fff;
-    font-weight: 400;
-  }
-
-  .hero-visual__portrait {
-    position: absolute;
-    z-index: 2;
-    width: 142px;
-    height: 190px;
-    right: -6px;
-    bottom: 24px;
-    overflow: hidden;
-    border: 7px solid var(--ink);
-    transform: rotate(5deg);
-    box-shadow: 0 17px 32px rgba(0, 0, 0, .28);
-  }
-
-  .hero-visual__portrait img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 18%;
-  }
-
-  .hero-visual__stamp {
-    position: absolute;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 111px;
-    height: 111px;
-    left: 0;
-    bottom: 34px;
-    border-radius: 50%;
-    background: var(--coral);
-    color: #fff;
-    transform: rotate(-9deg);
-    box-shadow: 0 12px 27px rgba(0, 0, 0, .22);
-  }
-
-  .hero-visual__stamp span {
-    margin-top: 5px;
-    font-size: 9px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-  }
-
-  .hero-visual__stamp strong {
-    font-family: var(--serif);
-    font-size: 27px;
-    font-weight: 400;
-    line-height: 1;
-  }
-
-  .hero__scroll {
-    position: absolute;
-    z-index: 2;
-    right: 32px;
-    bottom: 32px;
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    color: rgba(255, 255, 255, .45);
-    font-size: 10px;
-    letter-spacing: .11em;
-    text-transform: uppercase;
-    writing-mode: vertical-rl;
-  }
-
-  .hero__scroll-line {
-    width: 1px;
-    height: 45px;
-    background: rgba(255, 255, 255, .35);
-  }
-
-  /* ======= HERO ANIMATION ======= */
-  [data-reveal] {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .78s ease, transform .78s cubic-bezier(.2, .8, .2, 1);
-  }
-
-  [data-reveal="left"] {
-    transform: translateX(-30px);
-  }
-
-  [data-reveal="right"] {
-    transform: translateX(30px);
-  }
-
-  [data-reveal].is-visible {
-    opacity: 1;
-    transform: translate(0);
-  }
-
-  [data-delay="1"] {
-    transition-delay: .11s;
-  }
-
-  [data-delay="2"] {
-    transition-delay: .19s;
-  }
-
-  [data-delay="3"] {
-    transition-delay: .27s;
-  }
-
-
-
-  /* =========================== END HERO SECTION ============================== */
+   
 
 
 
@@ -1106,267 +813,554 @@
 
   /* =========================== END FOOTER============================== */
   /* =========================== HERO SECTION ============================== */
+
+  
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    background: linear-gradient(90deg, #f25d4d, #f7c2a8);
+    z-index: 2000;
+  }
+
   .hero {
     position: relative;
-    min-height: 650px;
-    overflow: hidden;
-    background: var(--ink);
+    background: linear-gradient(135deg, #171b35 0%, #1d2142 55%, #282c52 100%);
     color: #fff;
+    overflow: hidden;
+    min-height: 0;
   }
 
   .hero::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background: linear-gradient(105deg, rgba(23, 27, 53, 0.596) 0%, rgba(23, 27, 53, .98) 52%, rgba(40, 44, 82, .86) 100%);
-  }
-
-  .hero__glow {
-    position: absolute;
+    right: -120px;
+    top: -120px;
+    width: 420px;
+    height: 420px;
     border-radius: 50%;
-    filter: blur(2px);
-    pointer-events: none;
-  }
-
-  .hero__glow--one {
-    width: 490px;
-    height: 490px;
-    right: -130px;
-    top: -190px;
-    border: 1px solid rgba(222, 217, 245, .18);
-    box-shadow: 0 0 0 34px rgba(222, 217, 245, .03), 0 0 0 84px rgba(222, 217, 245, .025);
-  }
-
-  .hero__glow--two {
-    width: 260px;
-    height: 260px;
-    left: 47%;
-    bottom: -172px;
     background: rgba(242, 93, 77, .13);
+    animation: test2-float-a 14s ease-in-out infinite;
   }
 
-  .hero__grid {
-    min-height: 650px;
+  .hero::after {
+    content: "";
+    position: absolute;
+    left: -80px;
+    bottom: -140px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(222, 217, 245, .10);
+    animation: test2-float-b 17s ease-in-out infinite;
+  }
+
+  .hero .wrap {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: minmax(0, .92fr) minmax(440px, .9fr);
+    grid-template-columns: 1.15fr .85fr;
+    gap: 56px;
     align-items: center;
-    gap: 76px;
+    padding: 84px 0 92px;
+    transition: transform .15s linear;
+  }
+
+  .hero .crumbs {
+    font-size: .88rem;
+    opacity: .85;
+    margin-bottom: 18px;
+  }
+
+  .hero .crumbs a:hover { text-decoration: underline; }
+
+  .hero .eyebrow {
+    display: inline-block;
+    background: rgba(222, 217, 245, .12);
+    padding: 6px 14px;
+    border-radius: 999px;
+    color: var(--cream);
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    font-family: Fraunces, Georgia, serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    margin: 0 0 20px;
+    font-weight: 600;
+    letter-spacing: normal;
+  }
+
+  .hero p.lead {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, .72);
+    max-width: 56ch;
+    margin: 0 0 32px;
+  }
+
+  .hero .actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .hero .btn {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero .btn-accent {
+    background: #f25d4d;
+    color: #fff;
+  }
+
+  .hero .btn-accent:hover {
+    background: #d94c3e;
+    transform: translateY(-1px);
+  }
+
+  .hero .btn-ghost {
+    border: 2px solid rgba(255, 255, 255, .7);
+    color: #fff;
+    background: transparent;
+  }
+
+  .hero .btn-ghost:hover {
+    background: #fff;
+    color: #171b35;
+  }
+
+  .hero-card {
+    background: rgba(255, 255, 255, .07);
+    border: 1px solid rgba(222, 217, 245, .18);
+    border-radius: 18px;
+    padding: 32px;
+    backdrop-filter: blur(6px);
+  }
+
+  .hero-card h3 {
+    color: #fff;
+    font-family: Inter, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    margin: 0 0 14px;
+    font-weight: 600;
+  }
+
+  .hero-card ul {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+  }
+
+  .hero-card li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    color: rgba(255, 255, 255, .82);
+    font-size: .98rem;
+    line-height: 1.65;
+  }
+
+  .hero-card .tick {
+    flex: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #f25d4d;
+    display: grid;
+    place-items: center;
+    font-size: .72rem;
+    color: #fff;
+    margin-top: 2px;
+    transform: scale(0);
+    animation: test2-pop .5s cubic-bezier(.3, 1.6, .5, 1) forwards;
+  }
+
+  .hero-card li:nth-child(1) .tick { animation-delay: 1s; }
+  .hero-card li:nth-child(2) .tick { animation-delay: 1.15s; }
+  .hero-card li:nth-child(3) .tick { animation-delay: 1.3s; }
+  .hero-card li:nth-child(4) .tick { animation-delay: 1.45s; }
+  .hero-card li:nth-child(5) .tick { animation-delay: 1.55s; }
+
+  .hero .crumbs,
+  .hero .eyebrow,
+  .hero h1,
+  .hero p.lead,
+  .hero .actions,
+  .hero-card {
+    opacity: 0;
+    animation: test2-fade-up .9s cubic-bezier(.2, .7, .2, 1) forwards;
+  }
+
+  .hero .crumbs { animation-delay: .05s; }
+  .hero .eyebrow { animation-delay: .15s; }
+  .hero h1 { animation-delay: .25s; }
+  .hero p.lead { animation-delay: .4s; }
+  .hero .actions { animation-delay: .55s; }
+  .hero-card { animation-delay: .5s; }
+
+  .hero .btn-accent::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .45), transparent);
+    transform: skewX(-20deg);
+    animation: test2-shine 4.5s ease-in-out infinite;
+  }
+
+  /* Laptop */
+@media (max-width: 1100px) {
+  .hero__grid {
+    gap: 35px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 5.5vw, 68px);
+  }
+
+  .hero-visual {
+    height: 430px;
+  }
+
+  .hero-visual__portrait {
+    width: 120px;
+    height: 165px;
+    right: 0;
+  }
+
+  .hero-visual__stamp {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero__grid {
+    min-height: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 25px;
+    padding-top: 65px;
+    padding-bottom: 90px;
   }
 
   .hero__content {
-    padding: 38px 0 67px;
+    padding: 25px 0;
   }
 
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    color: var(--coral);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: .16em;
-    line-height: 1.2;
-    text-transform: uppercase;
-  }
-
-  .eyebrow--light {
-    color: var(--peach);
-  }
-
-  .eyebrow__line {
-    display: inline-block;
-    width: 29px;
-    height: 1px;
-    background: currentColor;
-  }
-
-  .hero h1,
-  .section-heading h2,
-  .mission__quote p,
-  .founder h2,
-  .pantry h2,
-  .contact h2 {
-    margin: 23px 0 20px;
-    font-family: var(--serif);
-    font-size: clamp(52px, 6vw, 82px);
-    font-weight: 400;
-    line-height: .94;
-    letter-spacing: -.045em;
-  }
-
-  .hero h1 em,
-  .section-heading h2 em,
-  .founder h2 em,
-  .pantry h2 em,
-  .contact h2 em {
-    color: var(--coral);
-    font-style: normal;
+  .hero h1 {
+    font-size: clamp(42px, 5.5vw, 58px);
+    line-height: 1;
   }
 
   .hero__lede {
-    max-width: 480px;
-    color: rgba(255, 255, 255, .7);
-    font-size: 17px;
+    font-size: 15px;
+  }
+
+  .hero__actions {
+    gap: 10px;
+  }
+
+  .hero-visual {
+    height: 360px;
+  }
+
+  .hero-visual__label {
+    left: 16px;
+    bottom: 18px;
+    font-size: 16px;
+  }
+
+  .hero-visual__portrait {
+    width: 100px;
+    height: 140px;
+    border-width: 5px;
+  }
+
+  .hero-visual__stamp {
+    width: 78px;
+    height: 78px;
+  }
+
+  .hero-visual__stamp strong {
+    font-size: 21px;
+  }
+
+  .hero-visual__stamp span {
+    font-size: 7px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+  }
+
+  /* Explicit grid prevents other global container rules
+     from changing this layout */
+  .hero .site-container.hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: min(100% - 40px, 520px);
+    min-height: auto;
+    gap: 35px;
+    padding-top: 110px;
+    padding-bottom: 85px;
+    text-align: left;
+  }
+
+  .hero__content {
+    padding: 0;
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 9vw, 60px);
+    line-height: 0.98;
+    margin: 20px 0;
+  }
+
+  .hero__lede {
+    max-width: 100%;
+    font-size: 15px;
     line-height: 1.65;
   }
 
   .hero__actions {
-    display: flex;
-    align-items: center;
+    margin-top: 25px;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 32px;
   }
 
   .hero__microcopy {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    margin-top: 27px;
-    color: rgba(255, 255, 255, .54);
-    font-size: 11px;
-  }
-
-  .hero__microcopy svg {
-    color: var(--peach);
+    align-items: flex-start;
+    font-size: 10px;
+    line-height: 1.5;
   }
 
   .hero-visual {
-    position: relative;
-    height: 490px;
-  }
-
-  .hero-visual__backdrop {
-    position: absolute;
-    width: 78%;
-    height: 80%;
-    right: 3%;
-    top: 12%;
-    border: 1px solid rgba(255, 255, 255, .2);
-    transform: rotate(5deg);
+    width: 100%;
+    height: clamp(300px, 75vw, 390px);
+    max-width: 460px;
+    margin-inline: auto;
   }
 
   .hero-visual__main {
-    position: absolute;
-    width: 75%;
-    height: 83%;
-    top: 2%;
-    right: 12%;
-    overflow: hidden;
-    border-radius: 2px;
-    transform: rotate(-2.5deg);
-    box-shadow: 0 26px 55px rgba(0, 0, 0, .28);
+    width: 76%;
+    height: 84%;
+    right: 11%;
   }
 
-  .hero-visual__main::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 37%, rgba(17, 20, 42, .84) 100%);
-  }
-
-  .hero-visual__main img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: saturate(.78) contrast(1.05);
-  }
-
-  .hero-visual__label {
-    position: absolute;
-    z-index: 1;
-    left: 26px;
-    bottom: 24px;
-    color: rgba(255, 255, 255, .75);
-    font-family: var(--serif);
-    font-size: 19px;
-    line-height: 1.05;
-  }
-
-  .hero-visual__label strong {
-    color: #fff;
-    font-weight: 400;
+  .hero-visual__backdrop {
+    width: 78%;
+    height: 80%;
+    right: 3%;
   }
 
   .hero-visual__portrait {
-    position: absolute;
-    z-index: 2;
-    width: 142px;
-    height: 190px;
-    right: -6px;
-    bottom: 24px;
-    overflow: hidden;
-    border: 7px solid var(--ink);
-    transform: rotate(5deg);
-    box-shadow: 0 17px 32px rgba(0, 0, 0, .28);
-  }
-
-  .hero-visual__portrait img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 18%;
+    width: 105px;
+    height: 145px;
+    right: 0;
+    bottom: 12px;
   }
 
   .hero-visual__stamp {
-    position: absolute;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 111px;
-    height: 111px;
+    width: 85px;
+    height: 85px;
     left: 0;
-    bottom: 34px;
-    border-radius: 50%;
-    background: var(--coral);
-    color: #fff;
-    transform: rotate(-9deg);
-    box-shadow: 0 12px 27px rgba(0, 0, 0, .22);
-  }
-
-  .hero-visual__stamp span {
-    margin-top: 5px;
-    font-size: 9px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .1em;
+    bottom: 20px;
   }
 
   .hero-visual__stamp strong {
-    font-family: var(--serif);
-    font-size: 27px;
-    font-weight: 400;
-    line-height: 1;
+    font-size: 22px;
   }
 
   .hero__scroll {
-    position: absolute;
-    z-index: 2;
-    right: 32px;
-    bottom: 32px;
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    color: rgba(255, 255, 255, .45);
-    font-size: 10px;
-    letter-spacing: .11em;
-    text-transform: uppercase;
-    writing-mode: vertical-rl;
+    right: 12px;
+    bottom: 18px;
+    font-size: 8px;
   }
 
   .hero__scroll-line {
-    width: 1px;
-    height: 45px;
-    background: rgba(255, 255, 255, .35);
+    height: 30px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero .site-container.hero__grid {
+    width: calc(100% - 36px);
+    padding-top: 100px;
+    padding-bottom: 75px;
+    gap: 30px;
   }
 
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+  }
+
+  .eyebrow__line {
+    width: 22px;
+  }
+
+  .hero h1 {
+    font-size: clamp(39px, 10vw, 48px);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-visual {
+    height: 310px;
+  }
+
+  .hero-visual__label {
+    left: 13px;
+    bottom: 16px;
+    font-size: 14px;
+  }
+
+  .hero-visual__portrait {
+    width: 88px;
+    height: 120px;
+    border-width: 4px;
+  }
+
+  .hero-visual__stamp {
+    width: 72px;
+    height: 72px;
+  }
+
+  .hero-visual__stamp strong {
+    font-size: 19px;
+  }
+
+  .hero-visual__stamp span {
+    font-size: 6px;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .hero .site-container.hero__grid {
+    width: calc(100% - 28px);
+  }
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .hero-visual {
+    height: 270px;
+  }
+
+  .hero-visual__portrait {
+    width: 75px;
+    height: 105px;
+  }
+
+  .hero-visual__stamp {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+  
   /* =========================== END HERO SECTION ============================== */
+
+ 
+
+  @keyframes test2-fade-up {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes test2-float-a {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-26px, 30px); }
+  }
+  @keyframes test2-float-b {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, -24px); }
+  }
+  @keyframes test2-pop {
+    0% { transform: scale(0); }
+    70% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  @keyframes test2-shine {
+    0% { left: -60%; }
+    60%, 100% { left: 130%; }
+  }
+
+  @media (max-width: 960px) {
+    .hero .wrap { grid-template-columns: 1fr; padding: 60px 0 68px; gap: 36px; }
+  }
+
+  @media (max-width: 760px) {
+    .hero .wrap { padding: 54px 0 62px; }
+    .hero h1 { font-size: clamp(2.25rem, 12vw, 3.2rem); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero::before,
+    .hero::after,
+    .hero .crumbs,
+    .hero .eyebrow,
+    .hero h1,
+    .hero p.lead,
+    .hero .actions,
+    .hero-card,
+    .hero-card .tick,
+    .hero .btn-accent::after {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
 </style>
 <body>
+<div class="progress" id="progress" aria-hidden="true"></div>
 <div class="topline">
   <div class="site-container topline__inner">
     <span>
@@ -1458,6 +1452,7 @@
                 <a href="/components/our_services/more_services/Community_service.html">
                   Community Service
                 </a>
+
                 <a href="/components/our_services/more_services/More_services.html">
                   More Services &amp; Workshops
                 </a>
@@ -1564,7 +1559,41 @@
   </div>
 </header>
 <main>
-  <h1>Bill and </h1>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <div class="crumbs"><a
+              href="https://www.wafaaorganization.org/our-services/">Our Services </a> &nbsp;/&nbsp; Bill &amp; Insurance Assistance
+          </div>
+          <span class="eyebrow">Bill &amp; Insurance Assistance</span>
+          <h1>Financial peace of mind, one step at a time.</h1>
+          <p class="lead">As part of our mission to uplift those facing 
+            personal and financial struggle, we are here to walk you through 
+            the proper steps to financial planning.</p>
+          <div class="actions">
+            <a class="btn btn-accent" href="https://www.wafaaorganization.org/client-intake-application/">Apply for
+              Support</a>
+            <a class="btn btn-ghost" href="https://www.wafaaorganization.org/contact/">Ask a Question</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="What you will learn">
+          <h3>We can Help you</h3>
+          <ul>
+            <li><span class="tick">✓</span>Learn how to budget effectively</li>
+            <li><span class="tick">✓</span>Pay your bills online or via mail</li>
+            <li><span class="tick">✓</span>Handle former debts</li>
+            <li><span class="tick">✓</span>Sign up for applicable government programs based on your need</li>
+            <li><span class="tick">✓</span>Find healthcare/various other types of insurance plans that suit your needs and fit your income</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+
+
+
+
+
 </main>
 <footer class="site-footer">
   <div class="site-container site-footer__top">
@@ -1596,223 +1625,542 @@
   </div>
 </footer>
 
+  
 <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', function () {
 
+  // ==========================================
+  // 1. ELEMENTS
+  // ==========================================
 
-    document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('header.site');
+  const nav = document.getElementById('nav');
+  const menuBtn = document.getElementById('menu-btn');
+  const progress = document.getElementById('progress');
+  const hero = document.querySelector('.hero');
+  const currentYear = document.getElementById('current-year');
 
-      const header = document.querySelector('header.site');
-      const nav = document.getElementById('nav');
-      const menuBtn = document.getElementById('menu-btn');
+  const reduceMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
 
-      /* 1. Sticky header */
+  const desktopQuery = window.matchMedia('(min-width: 761px)');
+  const hoverQuery = window.matchMedia('(hover: hover)');
 
-      let ticking = false;
+  // ==========================================
+  // 2. CURRENT YEAR
+  // ==========================================
 
-      function onScroll() {
-        header.classList.toggle('scrolled', window.scrollY > 30);
-        ticking = false;
+  if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+  }
+
+  // ==========================================
+  // 3. STICKY HEADER + SCROLL PROGRESS + PARALLAX
+  // ==========================================
+
+  let ticking = false;
+
+  function onScroll() {
+
+    const y = window.scrollY || document.documentElement.scrollTop;
+
+    // Sticky header
+    if (header) {
+      header.classList.toggle('scrolled', y > 30);
+    }
+
+    // Scroll progress bar
+    if (progress) {
+      const totalHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      const percentage = totalHeight > 0 ? y / totalHeight : 0;
+
+      progress.style.transform = `scaleX(${percentage})`;
+    }
+
+    // Hero parallax
+    if (!reduceMotion && hero && y < hero.offsetHeight + 200) {
+
+      const inner = hero.querySelector('.wrap');
+
+      if (inner) {
+        inner.style.transform = `translateY(${y * 0.06}px)`;
       }
+    }
 
-      window.addEventListener('scroll', function () {
-        if (!ticking) {
-          requestAnimationFrame(onScroll);
-          ticking = true;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+
+    if (!ticking) {
+      requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+
+  }, { passive: true });
+
+  onScroll();
+
+  // ==========================================
+  // 4. DROPDOWNS
+  // ==========================================
+
+  function closeDropdowns(except = null) {
+
+    if (!nav) return;
+
+    // Close main dropdowns
+    nav.querySelectorAll('.nav-dropdown.open').forEach(function (dropdown) {
+
+      if (dropdown !== except) {
+
+        dropdown.classList.remove('open');
+
+        const button = dropdown.querySelector(
+          ':scope > .nav-dropdown__toggle'
+        );
+
+        if (button) {
+          button.setAttribute('aria-expanded', 'false');
         }
-      }, { passive: true });
 
-      onScroll();
-
-
-      /* 2. Close all dropdowns */
-
-      function closeDropdowns(except = null) {
-
-        nav.querySelectorAll('.nav-dropdown.open').forEach(function (dropdown) {
-
-          if (dropdown !== except) {
-            dropdown.classList.remove('open');
-
-            const button = dropdown.querySelector(':scope > .nav-dropdown__toggle');
-
-            if (button) {
-              button.setAttribute('aria-expanded', 'false');
-            }
-          }
-
-        });
-
-        nav.querySelectorAll('.submenu.open').forEach(function (submenu) {
+        // Close nested submenus
+        dropdown.querySelectorAll('.submenu.open').forEach(function (submenu) {
 
           submenu.classList.remove('open');
 
-          const button = submenu.querySelector('.submenu__toggle');
+          const submenuBtn = submenu.querySelector('.submenu__toggle');
 
-          if (button) {
-            button.setAttribute('aria-expanded', 'false');
+          if (submenuBtn) {
+            submenuBtn.setAttribute('aria-expanded', 'false');
           }
 
         });
 
       }
 
-
-      /* 3. Main dropdown buttons */
-
-      nav.querySelectorAll('.nav-dropdown__toggle').forEach(function (button) {
-
-        button.addEventListener('click', function (event) {
-
-          event.stopPropagation();
-
-          const dropdown = button.closest('.nav-dropdown');
-          const isOpen = dropdown.classList.contains('open');
-
-          closeDropdowns(dropdown);
-
-          dropdown.classList.toggle('open', !isOpen);
-
-          button.setAttribute('aria-expanded', String(!isOpen));
-
-        });
-
-      });
-
-
-      /* 4. Nested More Services submenu */
-
-      nav.querySelectorAll('.submenu__toggle').forEach(function (button) {
-
-        button.addEventListener('click', function (event) {
-
-          event.stopPropagation();
-
-          const submenu = button.closest('.submenu');
-          const isOpen = submenu.classList.contains('open');
-
-          submenu.classList.toggle('open', !isOpen);
-
-          button.setAttribute('aria-expanded', String(!isOpen));
-
-        });
-
-      });
-
-
-      /* 5. Mobile menu */
-
-      function closeMobileMenu() {
-
-        nav.classList.remove('open');
-
-        menuBtn.setAttribute('aria-expanded', 'false');
-        menuBtn.setAttribute('aria-label', 'Open navigation menu');
-
-        menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-
-        closeDropdowns();
-
-      }
-
-      menuBtn.addEventListener('click', function (event) {
-
-        event.stopPropagation();
-
-        const isOpen = nav.classList.toggle('open');
-
-        menuBtn.setAttribute('aria-expanded', String(isOpen));
-
-        if (isOpen) {
-          menuBtn.setAttribute('aria-label', 'Close navigation menu');
-          menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-        } else {
-          closeMobileMenu();
-        }
-
-      });
-
-
-      /* 6. Close after clicking a link */
-
-      nav.querySelectorAll('a').forEach(function (link) {
-
-        link.addEventListener('click', function () {
-          closeMobileMenu();
-        });
-
-      });
-
-
-      /* 7. Close when clicking outside */
-
-      document.addEventListener('click', function (event) {
-
-        if (!header.contains(event.target)) {
-          closeMobileMenu();
-          closeDropdowns();
-        }
-
-      });
-
-
-      /* 8. Close menus when switching to desktop */
-
-      window.addEventListener('resize', function () {
-
-        if (window.innerWidth > 760) {
-          nav.classList.remove('open');
-
-          menuBtn.setAttribute('aria-expanded', 'false');
-          menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-
-        }
-
-      });
-
-
-      /* 9. Highlight current page */
-
-      const currentPath =
-        window.location.pathname.replace(/\/+$/, '') || '/';
-
-      nav.querySelectorAll('a.link, .nav-dropdown__menu a, .submenu__menu a')
-        .forEach(function (link) {
-
-          const linkPath = new URL(link.href, window.location.origin)
-            .pathname.replace(/\/+$/, '') || '/';
-
-          if (linkPath === currentPath) {
-
-            link.classList.add('active');
-            link.setAttribute('aria-current', 'page');
-
-            const parentDropdown = link.closest('.nav-dropdown');
-
-            if (parentDropdown) {
-              const parentButton =
-                parentDropdown.querySelector(':scope > .nav-dropdown__toggle');
-
-              if (parentButton) {
-                parentButton.classList.add('active');
-              }
-            }
-
-          }
-
-        });
     });
 
+    // Close all nested submenus except those inside the preserved dropdown
+    nav.querySelectorAll('.submenu.open').forEach(function (submenu) {
 
-    // -------- Hero Animation --------
-    const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target);
+      if (!except || !except.contains(submenu)) {
+
+        submenu.classList.remove('open');
+
+        const button = submenu.querySelector('.submenu__toggle');
+
+        if (button) {
+          button.setAttribute('aria-expanded', 'false');
+        }
+
       }
-    }), { threshold: .12, rootMargin: '0px 0px -48px 0px' });
-    document.querySelectorAll('[data-reveal]').forEach(element => revealObserver.observe(element));
 
-  </script>
+    });
+
+  }
+
+  // Main dropdown buttons
+  if (nav) {
+
+    nav.querySelectorAll('.nav-dropdown__toggle').forEach(function (button) {
+
+      button.addEventListener('click', function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const dropdown = button.closest('.nav-dropdown');
+
+        if (!dropdown) return;
+
+        const isOpen = dropdown.classList.contains('open');
+
+        closeDropdowns(dropdown);
+
+        dropdown.classList.toggle('open', !isOpen);
+
+        button.setAttribute('aria-expanded', String(!isOpen));
+
+      });
+
+    });
+
+    // Nested submenu buttons
+    nav.querySelectorAll('.submenu__toggle').forEach(function (button) {
+
+      button.addEventListener('click', function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const submenu = button.closest('.submenu');
+
+        if (!submenu) return;
+
+        const isOpen = submenu.classList.contains('open');
+
+        // Close other nested submenus
+        const parentDropdown = submenu.closest('.nav-dropdown');
+
+        if (parentDropdown) {
+
+          parentDropdown.querySelectorAll('.submenu.open').forEach(function (other) {
+
+            if (other !== submenu) {
+
+              other.classList.remove('open');
+
+              const otherBtn = other.querySelector('.submenu__toggle');
+
+              if (otherBtn) {
+                otherBtn.setAttribute('aria-expanded', 'false');
+              }
+
+            }
+
+          });
+
+        }
+
+        submenu.classList.toggle('open', !isOpen);
+
+        button.setAttribute('aria-expanded', String(!isOpen));
+
+      });
+
+    });
+
+  }
+
+  // ==========================================
+  // 5. MOBILE MENU
+  // ==========================================
+
+  function closeMobileMenu() {
+
+    if (!nav || !menuBtn) return;
+
+    nav.classList.remove('open');
+
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Open navigation menu');
+
+    menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+
+    closeDropdowns();
+
+  }
+
+  if (menuBtn && nav) {
+
+    menuBtn.addEventListener('click', function (event) {
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      const isOpen = nav.classList.toggle('open');
+
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+
+      if (isOpen) {
+
+        menuBtn.setAttribute('aria-label', 'Close navigation menu');
+
+        menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+
+      } else {
+
+        closeMobileMenu();
+
+      }
+
+    });
+
+    // Close mobile menu after clicking a link
+    nav.querySelectorAll('a').forEach(function (link) {
+
+      link.addEventListener('click', function () {
+        closeMobileMenu();
+      });
+
+    });
+
+  }
+
+  // ==========================================
+  // 6. CLOSE WHEN CLICKING OUTSIDE
+  // ==========================================
+
+  document.addEventListener('click', function (event) {
+
+    if (header && !header.contains(event.target)) {
+
+      closeMobileMenu();
+      closeDropdowns();
+
+    }
+
+  });
+
+  // ==========================================
+  // 7. RESPONSIVE MENU RESET
+  // ==========================================
+
+  function handleBreakpointChange() {
+
+    if (desktopQuery.matches) {
+
+      closeMobileMenu();
+      closeDropdowns();
+
+    }
+
+  }
+
+  if (desktopQuery.addEventListener) {
+    desktopQuery.addEventListener('change', handleBreakpointChange);
+  } else {
+    desktopQuery.addListener(handleBreakpointChange);
+  }
+
+  // ==========================================
+  // 8. ACTIVE PAGE HIGHLIGHT
+  // ==========================================
+
+  if (nav) {
+
+    const currentPath =
+      window.location.pathname.replace(/\/+$/, '') || '/';
+
+    nav.querySelectorAll(
+      'a.link, .nav-dropdown__menu a, .submenu__menu a'
+    ).forEach(function (link) {
+
+      const linkPath =
+        new URL(link.href, window.location.origin)
+          .pathname.replace(/\/+$/, '') || '/';
+
+      if (linkPath === currentPath) {
+
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+
+        const parentDropdown = link.closest('.nav-dropdown');
+
+        if (parentDropdown) {
+
+          const parentButton = parentDropdown.querySelector(
+            ':scope > .nav-dropdown__toggle'
+          );
+
+          if (parentButton) {
+            parentButton.classList.add('active');
+          }
+
+        }
+
+        const parentSubmenu = link.closest('.submenu');
+
+        if (parentSubmenu) {
+
+          const submenuButton = parentSubmenu.querySelector(
+            '.submenu__toggle'
+          );
+
+          if (submenuButton) {
+            submenuButton.classList.add('active');
+          }
+
+        }
+
+      }
+
+    });
+
+  }
+
+  // ==========================================
+  // 9. SCROLL REVEAL ANIMATIONS
+  // ==========================================
+
+  // Existing data-reveal elements
+  const revealElements = document.querySelectorAll('[data-reveal]');
+
+  // Add reveal classes to other elements
+  function addReveal(selector, direction, step) {
+
+    document.querySelectorAll(selector).forEach(function (element, index) {
+
+      element.classList.add('reveal');
+
+      if (direction) {
+        element.classList.add(direction);
+      }
+
+      if (step) {
+        element.style.setProperty('--d', (index * step) + 's');
+      }
+
+    });
+
+  }
+
+  addReveal('.intro .photo', 'left');
+  addReveal('.intro > div:last-child', 'right');
+  addReveal('.section-head');
+  addReveal('.grid4 .card', 'zoom', 0.12);
+  addReveal('.split .panel', null, 0.15);
+  addReveal('.vcard', 'zoom', 0.15);
+  addReveal('.cta', 'zoom');
+  addReveal('.rel', null, 0.08);
+  addReveal('.fgrid > div', null, 0.12);
+
+  // Combine both reveal systems
+  const allRevealElements = document.querySelectorAll(
+    '[data-reveal], .reveal'
+  );
+
+  if ('IntersectionObserver' in window && !reduceMotion) {
+
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+
+      entries.forEach(function (entry) {
+
+        if (entry.isIntersecting) {
+
+          const element = entry.target;
+
+          element.classList.add('is-visible', 'in');
+
+          observer.unobserve(element);
+
+          // Restore normal hover transitions after reveal
+          if (element.classList.contains('reveal')) {
+
+            element.addEventListener('transitionend', function done(event) {
+
+              if (
+                event.target !== element ||
+                event.propertyName !== 'opacity'
+              ) return;
+
+              element.classList.remove(
+                'reveal',
+                'left',
+                'right',
+                'zoom'
+              );
+
+              element.style.removeProperty('--d');
+
+            }, { once: true });
+
+          }
+
+        }
+
+      });
+
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -48px 0px'
+    });
+
+    allRevealElements.forEach(function (element) {
+      revealObserver.observe(element);
+    });
+
+  } else {
+
+    allRevealElements.forEach(function (element) {
+      element.classList.add('is-visible', 'in');
+    });
+
+  }
+
+  // ==========================================
+  // 10. 3D TILT ON CARDS
+  // ==========================================
+
+  if (!reduceMotion && hoverQuery.matches) {
+
+    document.querySelectorAll('.grid4 .card').forEach(function (card) {
+
+      card.addEventListener('mousemove', function (event) {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+        card.style.transition = 'box-shadow .25s';
+
+        card.style.transform =
+          `perspective(700px) rotateX(${-y * 8}deg) rotateY(${x * 8}deg) translateY(-4px)`;
+
+      });
+
+      card.addEventListener('mouseleave', function () {
+
+        card.style.transition =
+          'transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .25s';
+
+        card.style.transform = '';
+
+      });
+
+    });
+
+  }
+
+  // ==========================================
+  // 11. SMOOTH ANCHOR SCROLLING
+  // ==========================================
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
+    link.addEventListener('click', function (event) {
+
+      const href = link.getAttribute('href');
+
+      if (!href || href === '#') return;
+
+      let target;
+
+      try {
+        target = document.querySelector(href);
+      } catch (error) {
+        return;
+      }
+
+      if (!target) return;
+
+      event.preventDefault();
+
+      const headerHeight = header ? header.offsetHeight : 0;
+
+      const top =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        headerHeight -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: reduceMotion ? 'auto' : 'smooth'
+      });
+
+    });
+
+  });
+
+});
+</script>
+
 </body>
 
 </html>

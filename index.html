@@ -722,21 +722,48 @@
 
 
 /* =========================== HERO SECTION ============================== */
-.hero {
-  position: relative;
-  min-height: 650px;
-  overflow: hidden;
-  background: var(--ink);
-  color: #fff;
-}
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(
+        135deg,
+        #171b35 0%,
+        #1a235c 55%,
+        #293052 100%
+      );
+      color: white;
+      width: 100%;
+    }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(105deg, rgba(23, 27, 53, 1) 0%, rgba(23, 27, 53, .98) 52%, rgba(40, 44, 82, .86) 100%);
-}
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
 
+    .hero::before {
+      width: 430px;
+      height: 430px;
+      top: -160px;
+      right: -100px;
+      background: rgba(242, 93, 77, .18);
+      animation: floatA 14s ease-in-out infinite;
+    }
+
+    .hero::after {
+      width: 340px;
+      height: 340px;
+      bottom: -180px;
+      left: -90px;
+      background: rgba(222, 217, 245, .12);
+      animation: floatB 17s ease-in-out infinite;
+    }
+
+    .hero .site-container{
+      margin-top: 20px;
+    }
 .hero__glow {
   position: absolute;
   border-radius: 50%;
@@ -1011,12 +1038,745 @@
   transition-delay: .27s;
 }
 
+/* Laptop */
+@media (max-width: 1100px) {
+  .hero__grid {
+    gap: 35px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 5.5vw, 68px);
+  }
+
+  .hero-visual {
+    height: 430px;
+  }
+
+  .hero-visual__portrait {
+    width: 120px;
+    height: 165px;
+    right: 0;
+  }
+
+  .hero-visual__stamp {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero__grid {
+    min-height: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 25px;
+    padding-top: 65px;
+    padding-bottom: 90px;
+  }
+
+  .hero__content {
+    padding: 25px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 5.5vw, 58px);
+    line-height: 1;
+  }
+
+  .hero__lede {
+    font-size: 15px;
+  }
+
+  .hero__actions {
+    gap: 10px;
+  }
+
+  .hero-visual {
+    height: 360px;
+  }
+
+  .hero-visual__label {
+    left: 16px;
+    bottom: 18px;
+    font-size: 16px;
+  }
+
+  .hero-visual__portrait {
+    width: 100px;
+    height: 140px;
+    border-width: 5px;
+  }
+
+  .hero-visual__stamp {
+    width: 78px;
+    height: 78px;
+  }
+
+  .hero-visual__stamp strong {
+    font-size: 21px;
+  }
+
+  .hero-visual__stamp span {
+    font-size: 7px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+  }
+
+  /* Explicit grid prevents other global container rules
+     from changing this layout */
+  .hero .site-container.hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: min(100% - 40px, 520px);
+    min-height: auto;
+    gap: 35px;
+    padding-top: 110px;
+    padding-bottom: 85px;
+    text-align: left;
+  }
+
+  .hero__content {
+    padding: 0;
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 9vw, 60px);
+    line-height: 0.98;
+    margin: 20px 0;
+  }
+
+  .hero__lede {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero__actions {
+    margin-top: 25px;
+    flex-wrap: wrap;
+  }
+
+  .hero__microcopy {
+    align-items: flex-start;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: clamp(300px, 75vw, 390px);
+    max-width: 460px;
+    margin-inline: auto;
+  }
+
+  .hero-visual__main {
+    width: 76%;
+    height: 84%;
+    right: 11%;
+  }
+
+  .hero-visual__backdrop {
+    width: 78%;
+    height: 80%;
+    right: 3%;
+  }
+
+  .hero-visual__portrait {
+    width: 105px;
+    height: 145px;
+    right: 0;
+    bottom: 12px;
+  }
+
+  .hero-visual__stamp {
+    width: 85px;
+    height: 85px;
+    left: 0;
+    bottom: 20px;
+  }
+
+  .hero-visual__stamp strong {
+    font-size: 22px;
+  }
+
+  .hero__scroll {
+    right: 12px;
+    bottom: 18px;
+    font-size: 8px;
+  }
+
+  .hero__scroll-line {
+    height: 30px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero .site-container.hero__grid {
+    width: calc(100% - 36px);
+    padding-top: 100px;
+    padding-bottom: 75px;
+    gap: 30px;
+  }
+
+  .hero__content h1 p{
+    padding: 0;
+    width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+  }
+
+  .eyebrow__line {
+    width: 22px;
+  }
+
+  .hero h1 {
+    font-size: clamp(39px, 10vw, 48px);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-visual {
+    height: 310px;
+  }
+
+  .hero-visual__label {
+    left: 13px;
+    bottom: 16px;
+    font-size: 14px;
+  }
+
+  .hero-visual__portrait {
+    width: 88px;
+    height: 120px;
+    border-width: 4px;
+  }
+
+  .hero-visual__stamp {
+    width: 72px;
+    height: 72px;
+  }
+
+  .hero-visual__stamp strong {
+    font-size: 19px;
+  }
+
+  .hero-visual__stamp span {
+    font-size: 6px;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .hero .site-container.hero__grid {
+    width: calc(100% - 28px);
+  }
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .hero-visual {
+    height: 270px;
+  }
+
+  .hero-visual__portrait {
+    width: 75px;
+    height: 105px;
+  }
+
+  .hero-visual__stamp {
+    width: 65px;
+    height: 65px;
+  }
+}
 
 
 /* =========================== END HERO SECTION ============================== */
+/* =========================== MARQUEE SECTION ============================== */
+
+.marquee {
+  flex: none;
+  height: clamp(200px, 25vh, 320px);   /* height of the logo band */
+  display: flex;
+  align-items: center;
+  overflow: hidden;                 /* logos are clipped at the edges (no fade) */
+  background: #eef0f3;
+}
+
+.marquee__track {
+  display: flex;
+  flex: none;
+  width: max-content;
+  /* the duration is overwritten by JS so the speed stays constant in px/s */
+  animation: marquee-scroll 6s linear infinite;
+  will-change: transform;
+}
+
+/* hover anywhere on the strip = pause, move the mouse away = keeps going */
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+/* one "set" = the 5 logos written in the HTML (JS clones it) */
+.marquee__set {
+  display: flex;
+  flex: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* each logo sits in a "slot" – the slot width is the distance between logos */
+.marquee__item {
+  flex: 0 0 clamp(240px, 24vw, 440px);
+  min-width: 0;                      /* a wide logo must never stretch its slot */
+  display: flex;
+  flex-direction: column;            /* logo on top, name underneath */
+  align-items: center;
+  justify-content: center;
+}
+
+/* fixed-height box, so every name lines up on the same row
+   no matter how tall its logo is */
+.marquee__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 104px;
+}
+
+/* the visible name under each logo */
+.marquee__name {
+  margin-top: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #7b828c;
+}
+
+
+/* smaller slots and logos on phones */
+@media (max-width: 700px) {
+  .marquee__item { flex-basis: 210px; }
+  .marquee__logo { height: 84px; }
+  .marquee__name { margin-top: 12px; font-size: 10px; }
+}
+
+/* the track holds two identical halves, so moving by -50% is a seamless loop */
+@keyframes marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+/* people who asked their OS for less motion get a static, wrapped row */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .marquee__set[aria-hidden="true"] { display: none; }
+}
+
+
+/* =========================== END MARQUEE SECTION ============================== */
+
+/* =========================== SERVICES SECTION ============================== */
+
+.services-carousel-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+/* HEADING */
+
+.services-carousel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.services-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--coral);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.services-eyebrow span {
+  width: 25px;
+  height: 1px;
+  background: var(--coral);
+}
+
+.services-carousel-heading h2 {
+  margin: 0 0 15px;
+  font-family: var(--serif);
+  font-size: clamp(36px, 4.5vw, 57px);
+  font-weight: 400;
+  letter-spacing: -.04em;
+  line-height: 1.1;
+}
+
+.services-carousel-heading h2 em {
+  color: var(--coral);
+}
+
+.services-carousel-heading p {
+  max-width: 490px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* NAVIGATION */
+
+.services-carousel-controls {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.services-carousel-controls button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(26, 35, 92, .2);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.services-carousel-controls button:hover {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+
+/* SLIDER */
+
+.services-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.services-track {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  will-change: transform;
+  transition: transform .65s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* CARDS */
+
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 var(--service-card-width);
+  box-sizing: border-box;
+
+  min-width: 0;
+  min-height: 355px;
+
+  padding: 15px 15px 22px;
+  overflow: hidden;
+
+  background: var(--paper);
+  border: 1px solid rgba(26, 35, 92, .10);
+  border-radius: 16px;
+
+  transition:
+    border-color .35s ease,
+    box-shadow .35s ease,
+    transform .35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(242, 93, 77, .4);
+  box-shadow: 0 18px 40px rgba(26, 35, 92, .08);
+}
+
+/* ICON VISUAL */
+
+.service-card__visual {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 190px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 11px;
+  margin-bottom: 22px;
+}
+
+.service-card__visual::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 50%;
+  transition: transform .5s ease;
+}
+
+.service-card:hover .service-card__visual::after {
+  transform: scale(1.25);
+}
+
+.service-card__visual i {
+  position: relative;
+  z-index: 1;
+  font-size: 55px;
+  color: white;
+  transition: transform .4s ease;
+}
+
+.service-card:hover .service-card__visual i {
+  transform: scale(1.12);
+}
+
+/* COLOR VARIATIONS */
+
+.visual-coral {
+  background: linear-gradient(135deg, #f18c78, #d94c3e);
+}
+
+.visual-blue {
+  background: linear-gradient(135deg, #a2e1fb, #428fb9);
+}
+
+.visual-lavender {
+  background: linear-gradient(135deg, #eeebfb, #b6addd);
+}
+
+.visual-lavender i {
+  color: var(--ink);
+}
+
+.visual-navy {
+  background: linear-gradient(135deg, #29366f, #171b35);
+}
+
+.visual-green {
+  background: linear-gradient(135deg, #9ac7a9, #527d69);
+}
+
+/* CARD INFORMATION */
+
+.service-card__number {
+  margin-bottom: 11px;
+  color: var(--coral);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.service-card h3 {
+  min-height: 54px;
+  margin: 0 0 22px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.service-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid rgba(26, 35, 92, .12);
+  color: var(--ink-soft);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.service-card__link i {
+  color: var(--coral);
+  font-size: 13px;
+  transition: transform .3s ease;
+}
+
+.service-card:hover .service-card__link i {
+  transform: translate(3px, -3px);
+}
+
+/* PROGRESS & COUNTER */
+
+.services-carousel-footer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 32px;
+}
+
+.services-progress {
+  height: 2px;
+  flex: 1;
+  background: rgba(26, 35, 92, .13);
+  overflow: hidden;
+}
+
+.services-progress__bar {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--coral);
+  transition: width .5s ease;
+}
+
+.services-counter {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.services-current {
+  color: var(--coral);
+}
+
+.services-counter__separator {
+  color: rgba(26, 35, 92, .35);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .services-carousel-section {
+    padding: 75px 0;
+  }
+
+  .service-card {
+    width: calc((100vw - 72px) / 2.2);
+    min-height: 330px;
+  }
+
+  .service-card__visual {
+    height: 165px;
+  }
+
+  .services-carousel-heading h2 {
+    font-size: 43px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .services-carousel-section {
+    padding: 60px 0;
+  }
+
+  .services-carousel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .services-carousel-heading h2 {
+    font-size: 38px;
+  }
+
+  .services-carousel-heading p {
+    font-size: 12px;
+  }
+
+  .services-carousel-controls {
+    align-self: flex-end;
+  }
+
+  .services-carousel-controls button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .service-card {
+    width: calc(100vw - 65px);
+    min-height: 330px;
+  }
+
+  .service-card__visual {
+    height: 175px;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+  }
+
+  .services-carousel-footer {
+    margin-top: 24px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .services-track,
+  .service-card,
+  .service-card__visual i {
+    transition: none;
+  }
+}
 
 
 
+
+/* =========================== END SERVICE SECTION ============================== */
 
 
 
@@ -1136,266 +1896,8 @@
   }
 
 /* =========================== END FOOTER============================== */
-/* =========================== HERO SECTION ============================== */
-.hero {
-  position: relative;
-  min-height: 650px;
-  overflow: hidden;
-  background: var(--ink);
-  color: #fff;
-}
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(105deg, rgba(23, 27, 53, 0.596) 0%, rgba(23, 27, 53, .98) 52%, rgba(40, 44, 82, .86) 100%);
-}
 
-.hero__glow {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(2px);
-  pointer-events: none;
-}
-
-.hero__glow--one {
-  width: 490px;
-  height: 490px;
-  right: -130px;
-  top: -190px;
-  border: 1px solid rgba(222, 217, 245, .18);
-  box-shadow: 0 0 0 34px rgba(222, 217, 245, .03), 0 0 0 84px rgba(222, 217, 245, .025);
-}
-
-.hero__glow--two {
-  width: 260px;
-  height: 260px;
-  left: 47%;
-  bottom: -172px;
-  background: rgba(242, 93, 77, .13);
-}
-
-.hero__grid {
-  min-height: 650px;
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, .92fr) minmax(440px, .9fr);
-  align-items: center;
-  gap: 76px;
-}
-
-.hero__content {
-  padding: 38px 0 67px;
-}
-
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  color: var(--coral);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .16em;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.eyebrow--light {
-  color: var(--peach);
-}
-
-.eyebrow__line {
-  display: inline-block;
-  width: 29px;
-  height: 1px;
-  background: currentColor;
-}
-
-.hero h1,
-.section-heading h2,
-.mission__quote p,
-.founder h2,
-.pantry h2,
-.contact h2 {
-  margin: 23px 0 20px;
-  font-family: var(--serif);
-  font-size: clamp(52px, 6vw, 82px);
-  font-weight: 400;
-  line-height: .94;
-  letter-spacing: -.045em;
-}
-
-.hero h1 em,
-.section-heading h2 em,
-.founder h2 em,
-.pantry h2 em,
-.contact h2 em {
-  color: var(--coral);
-  font-style: normal;
-}
-
-.hero__lede {
-  max-width: 480px;
-  color: rgba(255, 255, 255, .7);
-  font-size: 17px;
-  line-height: 1.65;
-}
-
-.hero__actions {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 32px;
-}
-
-.hero__microcopy {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-top: 27px;
-  color: rgba(255, 255, 255, .54);
-  font-size: 11px;
-}
-
-.hero__microcopy svg {
-  color: var(--peach);
-}
-
-.hero-visual {
-  position: relative;
-  height: 490px;
-}
-
-.hero-visual__backdrop {
-  position: absolute;
-  width: 78%;
-  height: 80%;
-  right: 3%;
-  top: 12%;
-  border: 1px solid rgba(255, 255, 255, .2);
-  transform: rotate(5deg);
-}
-
-.hero-visual__main {
-  position: absolute;
-  width: 75%;
-  height: 83%;
-  top: 2%;
-  right: 12%;
-  overflow: hidden;
-  border-radius: 2px;
-  transform: rotate(-2.5deg);
-  box-shadow: 0 26px 55px rgba(0, 0, 0, .28);
-}
-
-.hero-visual__main::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 37%, rgba(17, 20, 42, .84) 100%);
-}
-
-.hero-visual__main img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(.78) contrast(1.05);
-}
-
-.hero-visual__label {
-  position: absolute;
-  z-index: 1;
-  left: 26px;
-  bottom: 24px;
-  color: rgba(255, 255, 255, .75);
-  font-family: var(--serif);
-  font-size: 19px;
-  line-height: 1.05;
-}
-
-.hero-visual__label strong {
-  color: #fff;
-  font-weight: 400;
-}
-
-.hero-visual__portrait {
-  position: absolute;
-  z-index: 2;
-  width: 142px;
-  height: 190px;
-  right: -6px;
-  bottom: 24px;
-  overflow: hidden;
-  border: 7px solid var(--ink);
-  transform: rotate(5deg);
-  box-shadow: 0 17px 32px rgba(0, 0, 0, .28);
-}
-
-.hero-visual__portrait img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 18%;
-}
-
-.hero-visual__stamp {
-  position: absolute;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 111px;
-  height: 111px;
-  left: 0;
-  bottom: 34px;
-  border-radius: 50%;
-  background: var(--coral);
-  color: #fff;
-  transform: rotate(-9deg);
-  box-shadow: 0 12px 27px rgba(0, 0, 0, .22);
-}
-
-.hero-visual__stamp span {
-  margin-top: 5px;
-  font-size: 9px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-}
-
-.hero-visual__stamp strong {
-  font-family: var(--serif);
-  font-size: 27px;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.hero__scroll {
-  position: absolute;
-  z-index: 2;
-  right: 32px;
-  bottom: 32px;
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  color: rgba(255, 255, 255, .45);
-  font-size: 10px;
-  letter-spacing: .11em;
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-}
-
-.hero__scroll-line {
-  width: 1px;
-  height: 45px;
-  background: rgba(255, 255, 255, .35);
-}
-
-/* =========================== END HERO SECTION ============================== */
 </style>
 
 <body>
@@ -1619,14 +2121,247 @@
             <span class="hero-visual__label">Care becomes
               change<br /><strong>one family at a time.</strong></span>
           </div>
-          <div class="hero-visual__portrait"><img src="../../assets/wafaa-founder.jpg" alt="Wafaa Saad, founder of WAFAA" />
+          <div class="hero-visual__portrait"><img src="../../assets/wafaa-founder.jpg"
+              alt="Wafaa Saad, founder of WAFAA" />
           </div>
           <div class="hero-visual__stamp"> <i class="fa-solid fa-solid fa-bell"></i>
             </i><span>Here to help</span><strong>24/7</strong></div>
         </div>
       </div>
       <div class="hero__scroll">Scroll to explore <span class="hero__scroll-line"></span></div>
+    </section> 
+  
+  
+    <section class="marquee" data-speed="360" aria-label="Brands that trust us">
+      <div class="marquee__track">
+        <ul class="marquee__set">
+  
+          <!-- 1 · Quadra-Frame -->
+          <li class="marquee__item">
+            <img src="assets/partner1.jpg" alt="">
+            <span class="marquee__name" aria-hidden="true">Sheriff Richard Berdnik</span>
+          </li>
+  
+          <!-- 2 · Traverse Company -->
+          <li class="marquee__item">
+            <img src="assets/partner2.jpg" alt="">
+            <span class="marquee__name" aria-hidden="true">Congressman Bill Pascrell</span>
+          </li>
+  
+          <!-- 3 · Bramwell -->
+          <li class="marquee__item">
+            <img src="assets/partner3.jpg" alt="">
+            <span class="marquee__name" aria-hidden="true">Governor Christopher Christie</span>
+          </li>
+  
+          <!-- 4 · Currentline -->
+          <li class="marquee__item">
+            <img src="assets/partner4.jpg" alt="">
+            <span class="marquee__name" aria-hidden="true">US Senator Jon Corzine</span>
+          </li>
+  
+          <!-- 5 · Via Forma -->
+          <li class="marquee__item">
+            <img src="assets/partner5.jpg" alt="">
+            <span class="marquee__name" aria-hidden="true">Senator Cory Booker</span>
+          </li>
+  
+        </ul>
+      </div>
     </section>
+  
+  
+    <section class="services-carousel-section" id="our-services">
+  
+      <div class="site-container">
+  
+        <div class="services-carousel-heading">
+          <div>
+            <span class="services-eyebrow">
+              <span></span> WHAT WE DO
+            </span>
+            <h2>Services that make a <em>difference.</em></h2>
+            <p>
+              Practical support, guidance and resources to help
+              individuals and families build a stronger future.
+            </p>
+          </div>
+  
+          <div class="services-carousel-controls">
+            <button class="services-prev" aria-label="Previous services">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+  
+            <button class="services-next" aria-label="Next services">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+  
+        <div class="services-carousel">
+          <div class="services-track">
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-coral">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <span class="service-card__number">01</span>
+              <h3>24/7 Hotline for Support Counseling</h3>
+              <span class="service-card__link">WAFAA SUPPORT <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-blue">
+                <i class="fa-solid fa-people-arrows-left-right"></i>
+              </div>
+              <span class="service-card__number">02</span>
+              <h3>Referrals for Assistance</h3>
+              <span class="service-card__link">FAMILY SUPPORT <i
+                  class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-lavender">
+                <i class="fa-solid fa-child-reaching"></i>
+              </div>
+              <span class="service-card__number">03</span>
+              <h3>Children's Therapy</h3>
+              <span class="service-card__link">CHILD WELLNESS <i
+                  class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-navy">
+                <i class="fa-solid fa-hands-holding-child"></i>
+              </div>
+              <span class="service-card__number">04</span>
+              <h3>Crisis Intervention</h3>
+              <span class="service-card__link">URGENT SUPPORT <i
+                  class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-blue">
+                <i class="fa-solid fa-route"></i>
+              </div>
+              <span class="service-card__number">05</span>
+              <h3>Career Development</h3>
+              <span class="service-card__link">CAREER GUIDANCE <i
+                  class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-coral">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <span class="service-card__number">06</span>
+              <h3>Court Assistance</h3>
+              <span class="service-card__link">PRACTICAL SUPPORT <i
+                  class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-lavender">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <span class="service-card__number">07</span>
+              <h3>Cultural Sensitivity Training</h3>
+              <span class="service-card__link">COMMUNITY <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-green">
+                <i class="fa-solid fa-basket-shopping"></i>
+              </div>
+              <span class="service-card__number">08</span>
+              <h3>Food Pantry</h3>
+              <span class="service-card__link">BASIC NEEDS <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-coral">
+                <i class="fa-solid fa-hands-holding-circle"></i>
+              </div>
+              <span class="service-card__number">09</span>
+              <h3>Foster Parent Assistance</h3>
+              <span class="service-card__link">FAMILY CARE <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-blue">
+                <i class="fa-solid fa-file-lines"></i>
+              </div>
+              <span class="service-card__number">10</span>
+              <h3>Immigration Paperwork</h3>
+              <span class="service-card__link">DOCUMENTATION <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-lavender">
+                <i class="fa-solid fa-language"></i>
+              </div>
+              <span class="service-card__number">11</span>
+              <h3>Translation Assistance</h3>
+              <span class="service-card__link">ACCESSIBILITY <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-navy">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <span class="service-card__number">12</span>
+              <h3>Anger Management</h3>
+              <span class="service-card__link">PERSONAL GROWTH <i
+                  class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+            <article class="service-card">
+              <div class="service-card__visual visual-green">
+                <i class="fa-solid fa-house-chimney-heart"></i>
+              </div>
+              <span class="service-card__number">13</span>
+              <h3>Social Services, Housing, Medical Insurance & Food Stamps</h3>
+              <span class="service-card__link">COMMUNITY RESOURCES <i
+                  class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </article>
+  
+          </div>
+        </div>
+  
+        <div class="services-carousel-footer">
+          <div class="services-progress">
+            <span class="services-progress__bar"></span>
+          </div>
+  
+          <div class="services-counter">
+            <span class="services-current">01</span>
+            <span class="services-counter__separator">/</span>
+            <span>13</span>
+          </div>
+        </div>
+  
+      </div>
+  
+    </section>
+  
+    
+    <!-- <section class="work section-pad section-pad--dark" id="work">
+      <div class="site-container">
+        <div class="section-heading section-heading--light" data-reveal="up">
+          <div>
+            <div class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> What we do</div>
+            <h2>One door.<br /><em>Many ways forward.</em></h2>
+          </div>
+          <p>From counseling and crisis response to food access and translation, our work is designed to remove the next
+            barrier.</p>
+        </div>
+        <div class="services-grid" id="services"></div>
+        <div class="work__footer"><span>Need help finding the right starting point?</span><a
+            class="text-link text-link--light" href="#contact">Talk to our team ↗</a></div>
+      </div>
+    </section> -->
+    
+  
   </main>
 
     <footer class="site-footer">
@@ -1876,6 +2611,234 @@
       }), { threshold: .12, rootMargin: '0px 0px -48px 0px' });
       document.querySelectorAll('[data-reveal]').forEach(element => revealObserver.observe(element));
 
+
+
+      // service carousel
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const carousel = document.querySelector(".services-carousel");
+  const track = document.querySelector(".services-track");
+  const nextBtn = document.querySelector(".services-next");
+  const prevBtn = document.querySelector(".services-prev");
+  const currentDisplay = document.querySelector(".services-current");
+  const progressBar = document.querySelector(".services-progress__bar");
+
+  if (!carousel || !track) return;
+
+  const originalCards = Array.from(track.children);
+  const total = originalCards.length;
+
+  let visible = 3;
+  let index = 0;
+  let timer;
+  let isMoving = false;
+
+  const autoplayDelay = 4000;
+
+  function getVisible() {
+    if (window.innerWidth <= 600) return 1;
+    if (window.innerWidth <= 900) return 2;
+    return 3;
+  }
+
+  function getStep() {
+    const card = track.querySelector(".service-card");
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+
+    return card.getBoundingClientRect().width + gap;
+  }
+
+  function updatePosition(animate = true) {
+    track.style.transition = animate
+      ? "transform .65s cubic-bezier(.22, 1, .36, 1)"
+      : "none";
+
+    track.style.transform =
+      `translate3d(-${index * getStep()}px, 0, 0)`;
+  }
+
+  function updateInformation() {
+    const actualIndex =
+      ((index - visible) % total + total) % total;
+
+    currentDisplay.textContent =
+      String(actualIndex + 1).padStart(2, "0");
+
+    progressBar.style.width =
+      `${((actualIndex + 1) / total) * 100}%`;
+  }
+
+  function buildCarousel() {
+
+    visible = Math.min(getVisible(), total);
+
+    track.innerHTML = "";
+
+    const before = originalCards.slice(-visible);
+    const after = originalCards.slice(0, visible);
+
+    before.forEach(card => {
+      track.appendChild(card.cloneNode(true));
+    });
+
+    originalCards.forEach(card => {
+      track.appendChild(card.cloneNode(true));
+    });
+
+    after.forEach(card => {
+      track.appendChild(card.cloneNode(true));
+    });
+
+    // Calculate exact width using the carousel container
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+
+    const availableWidth = carousel.clientWidth;
+
+    const cardWidth =
+      (availableWidth - gap * (visible - 1)) / visible;
+
+    track.querySelectorAll(".service-card").forEach(card => {
+      card.style.width = `${cardWidth}px`;
+    });
+
+    index = visible;
+
+    updatePosition(false);
+    updateInformation();
+  }
+
+  function move(direction) {
+
+    if (isMoving) return;
+
+    isMoving = true;
+    index += direction;
+
+    updatePosition(true);
+    updateInformation();
+  }
+
+  track.addEventListener("transitionend", event => {
+
+    if (event.propertyName !== "transform") return;
+
+    if (index >= total + visible) {
+      index = visible;
+      updatePosition(false);
+    }
+
+    if (index < visible) {
+      index = total + visible - 1;
+      updatePosition(false);
+    }
+
+    isMoving = false;
+    updateInformation();
+  });
+
+  function startAutoplay() {
+    stopAutoplay();
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    timer = setInterval(() => move(1), autoplayDelay);
+  }
+
+  function stopAutoplay() {
+    clearInterval(timer);
+  }
+
+  nextBtn?.addEventListener("click", () => {
+    move(1);
+    startAutoplay();
+  });
+
+  prevBtn?.addEventListener("click", () => {
+    move(-1);
+    startAutoplay();
+  });
+
+  carousel.addEventListener("mouseenter", stopAutoplay);
+  carousel.addEventListener("mouseleave", startAutoplay);
+
+  let resizeTimer;
+
+  window.addEventListener("resize", () => {
+
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+      stopAutoplay();
+      buildCarousel();
+      startAutoplay();
+    }, 200);
+
+  });
+
+  buildCarousel();
+  startAutoplay();
+
+});
+
+
+
+//Marquee caroussel
+
+class InfiniteMarquee {
+  constructor(root) {
+    this.root   = root;
+    this.track  = root.querySelector('.marquee__track');
+    this.source = root.querySelector('.marquee__set');          // the original set
+    this.speed  = parseFloat(root.dataset.speed) || 360;        // px per second
+    this.signature = '';
+    this.lastWidth = 0;
+
+    this.build();
+
+    // rebuild when the width changes (rotate phone, resize window…)
+    let timer;
+    new ResizeObserver(() => {
+      if (this.root.clientWidth === this.lastWidth) return;
+      clearTimeout(timer);
+      timer = setTimeout(() => this.build(), 120);
+    }).observe(this.root);
+  }
+
+  build() {
+    const viewport = this.root.clientWidth;
+    this.lastWidth = viewport;
+
+    // 1. measure one set (clones never change its width)
+    const setWidth = this.source.getBoundingClientRect().width;
+    if (!setWidth) return;
+
+    // 2. how many copies does one half need to cover the screen?
+    const perHalf = Math.max(1, Math.ceil(viewport / setWidth));
+    const signature = perHalf + '|' + setWidth.toFixed(2);
+    if (signature === this.signature) return;   // nothing changed – don't restart the animation
+
+    // 3. rebuild: (perHalf * 2) sets in total = two identical halves
+    this.track.querySelectorAll('.is-clone').forEach(el => el.remove());
+    for (let i = 1; i < perHalf * 2; i++) {
+      const clone = this.source.cloneNode(true);
+      clone.classList.add('is-clone');
+      clone.setAttribute('aria-hidden', 'true');
+      clone.querySelectorAll('[id]').forEach(el => el.removeAttribute('id')); // no duplicate ids
+      this.track.appendChild(clone);
+    }
+
+    // 4. keep the speed constant in px/s, whatever the screen size
+    const halfWidth = perHalf * setWidth;
+    this.track.style.setProperty('--duration', (halfWidth / this.speed).toFixed(3) + 's');
+
+    this.signature = signature;
+  }
+}
+
+document.querySelectorAll('.marquee').forEach(el => new InfiniteMarquee(el));
   </script>
 </body>
 
