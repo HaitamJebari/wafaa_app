@@ -13,7 +13,6 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
-</head>
 <style>
   /* =========================== VARIABLES ============================== */
 
@@ -74,7 +73,6 @@
     width: min(1180px, calc(100% - 64px));
     margin-inline: auto;
   }
-
   /* =========================== TOPLINE ============================== */
 
   .topline {
@@ -186,7 +184,7 @@
     font-weight: 500;
     font-size: .68rem;
     letter-spacing: .04em;
-    color: var(--muted);
+    color: #5b6675;
     line-height: 1.3;
   }
 
@@ -258,7 +256,7 @@
     display: none;
     background: transparent;
     color: var(--ink);
-    border: 1px solid var(--line);
+    border: 1px solid #e8e3db;
     border-radius: 10px;
     padding: 9px 12px;
     font-size: 1.15rem;
@@ -321,8 +319,8 @@
 
       padding: 12px 16px 20px;
       background: var(--paper);
-      border-bottom: 1px solid var(--line);
-      box-shadow: var(--shadow);
+      border-bottom: 1px solid #e8e3db;
+      box-shadow: 0 10px 30px rgba(31, 42, 55, .08);
 
       opacity: 0;
       visibility: hidden;
@@ -466,9 +464,9 @@
     padding: 10px;
 
     background: var(--paper);
-    border: 1px solid var(--line);
+    border: 1px solid #e8e3db;
     border-radius: 16px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 30px rgba(31, 42, 55, .08);
 
     opacity: 0;
     visibility: hidden;
@@ -496,8 +494,8 @@
     height: 13px;
 
     background: var(--paper);
-    border-top: 1px solid var(--line);
-    border-left: 1px solid var(--line);
+    border-top: 1px solid #e8e3db;
+    border-left: 1px solid #e8e3db;
 
     transform: rotate(45deg);
   }
@@ -541,7 +539,7 @@
   .submenu {
     position: relative;
     margin-top: 5px;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid #e8e3db;
     padding-top: 5px;
   }
 
@@ -569,8 +567,8 @@
     padding: 10px;
 
     background: var(--paper);
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow);
+    border: 1px solid #e8e3db;
+    box-shadow: 0 10px 30px rgba(31, 42, 55, .08);
     border-radius: 9px;
 
     display: block;
@@ -1042,31 +1040,39 @@
     animation: test2-shine 4.5s ease-in-out infinite;
   }
 
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity .8s cubic-bezier(.2, .7, .2, 1),
+    transform .8s cubic-bezier(.2, .7, .2, 1);
+  transition-delay: 0s;
+}
+
+html.js .reveal.left {
+  transform: translateX(-40px);
+}
+
+html.js .reveal.right {
+  transform: translateX(40px);
+}
+
+html.js .reveal.zoom {
+  transform: scale(.94);
+}
+
+html.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
   html.js .reveal {
-      opacity: 0;
-      transform: translateY(35px);
-      transition:
-        opacity .8s cubic-bezier(.2,.7,.2,1),
-        transform .8s cubic-bezier(.2,.7,.2,1);
-      transition-delay: var(--d, 0s);
-    }
-
-    html.js .reveal.left {
-      transform: translateX(-40px);
-    }
-
-    html.js .reveal.right {
-      transform: translateX(40px);
-    }
-
-    html.js .reveal.zoom {
-      transform: scale(.94);
-    }
-
-    html.js .reveal.in {
-      opacity: 1;
-      transform: none;
-    }
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
   /* Laptop */
 @media (max-width: 1100px) {
@@ -1403,7 +1409,601 @@
       transform: none !important;
     }
   }
+
+    /* =========================== INTRO SECTION ============================== */
+/* ------------------------------------------------------------ */
+
+    /* Sections */
+    section {
+      padding: 88px 0
+    }
+
+    .section-head {
+      max-width: 680px;
+      margin-bottom: 48px
+    }
+
+    .section-head .tag {
+      color: #e0824f;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      margin-bottom: 10px;
+      display: block
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+      margin-bottom: 14px
+    }
+
+    .section-head p {
+      color: #5b6675;
+      font-size: 1.05rem
+    }
+
+    /* Intro */
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center
+    }
+
+    .intro .photo {
+      border-radius:18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(31, 42, 55, .08);
+      background: #f4ede3;
+      padding: 28px;
+      display: grid;
+      place-items: center;
+      min-height: 320px
+    }
+
+    .intro .photo img {
+      max-height: 340px;
+      width: auto;
+      object-fit: contain
+    }
+
+    .intro p {
+      color: #5b6675;
+      font-size: 1.08rem;
+      margin-bottom: 16px
+    }
+
+    .intro blockquote {
+      border-left: 4px solid #e0824f;
+      padding: 6px 0 6px 20px;
+      font-family: Fraunces, serif;
+      font-size: 1.25rem;
+      color: #1f2a37;
+      margin-top: 22px
+    }
+
+    /* Cards */
+    .topics {
+      background: #f4ede3
+    }
+
+    .grid4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e8e3db;
+      border-radius:18px;
+      padding: 30px 26px;
+      box-shadow: 0 10px 30px rgba(31, 42, 55, .08);
+      transition: .25s
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(31, 42, 55, .12)
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: #e8f2f0;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      color: #1f6f6b
+    }
+
+    .icon svg {
+      width: 28px;
+      height: 28px
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px
+    }
+
+    .card p {
+      color: #5b6675;
+      font-size: .95rem
+    }
+
+    /* Who */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px
+    }
+
+    .panel {
+      border-radius:18px;
+      padding: 40px;
+      border: 1px solid #e8e3db;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(31, 42, 55, .08)
+    }
+
+    .panel.dark {
+      background: #154f4c;
+      color: #e3f0ee;
+      border-color: transparent
+    }
+
+    .panel.dark h3 {
+      color: #fff
+    }
+
+    .panel h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px
+    }
+
+    .panel p {
+      color: #5b6675
+    }
+
+    .panel.dark p {
+      color: #cfe3e0
+    }
+
+    /* Videos */
+    .videos {
+      background: #fff
+    }
+
+    .vgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px
+    }
+
+    .vcard {
+      background: #fbf9f6;
+      border: 1px solid #e8e3db;
+      border-radius:18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(31, 42, 55, .08)
+    }
+
+    .frame {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: #0d1b1a
+    }
+
+    .frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0
+    }
+
+    .vcard .meta {
+      padding: 20px 24px
+    }
+
+    .vcard h3 {
+      font-size: 1.15rem;
+      margin-bottom: 4px
+    }
+
+    .vcard p {
+      color: #5b6675;
+      font-size: .92rem
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #e0824f, #c96a39);
+      color: #fff;
+      border-radius: 28px;
+      padding: 64px 48px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(31, 42, 55, .08)
+    }
+
+    .cta h2 {
+      color: #fff;
+      font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+      margin-bottom: 14px
+    }
+
+    .cta p {
+      max-width: 58ch;
+      margin: 0 auto 30px;
+      color: #fff3ea;
+      font-size: 1.08rem
+    }
+
+    .cta .actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .cta .btn-light {
+      background: #fff;
+      color: #a8501f
+    }
+
+    .cta .btn-light:hover {
+      background: #fff3ea;
+      transform: translateY(-1px)
+    }
+
+    .cta .btn-ghost {
+      border-color: #fff;
+      color: #fff
+    }
+
+    .cta .btn-ghost:hover {
+      background: #fff;
+      color: #a8501f
+    }
+
+    /* Related */
+    .related {
+      padding-top: 0
+    }
+
+    .rel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .rel {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: #ffffff;
+      border: 1px solid #e8e3db;
+      border-radius: 14px;
+      font-weight: 600;
+      transition: .2s
+    }
+
+    .rel:hover {
+      border-color: #1f6f6b;
+      color: #154f4c;
+      transform: translateX(3px)
+    }
+
+    .rel span {
+      color: #e0824f
+    }
+
+    @media(max-width:960px) {
+
+      .intro,
+      .split,
+      .vgrid {
+        grid-template-columns: 1fr
+      }
+
+      .grid4 {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .rel-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+    }
+
+    @media(max-width:760px) {
+
+      section {
+        padding: 64px 0
+      }
+
+      .grid4,
+      .rel-grid {
+        grid-template-columns: 1fr
+      }
+
+      .cta {
+        padding: 44px 24px
+      }
+
+      .panel {
+        padding: 28px
+      }
+    }
+
+    /* ===== Animations ===== */
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      transform-origin: 0 50%;
+      transform: scaleX(0);
+      background: linear-gradient(90deg, #e0824f, #1f6f6b);
+      z-index: 100
+    }
+
+   html.js .reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity .8s cubic-bezier(.2, .7, .2, 1),
+    transform .8s cubic-bezier(.2, .7, .2, 1);
+  transition-delay: 0s;
+}
+
+html.js .reveal.left {
+  transform: translateX(-40px);
+}
+
+html.js .reveal.right {
+  transform: translateX(40px);
+}
+
+html.js .reveal.zoom {
+  transform: scale(.94);
+}
+
+html.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+    /* buttons: shine sweep */
+    .btn {
+      position: relative;
+      overflow: hidden
+    }
+
+    .btn-accent::after,
+    .btn-light::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -60%;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .45), transparent);
+      transform: skewX(-20deg);
+      animation: shine 4.5s ease-in-out infinite
+    }
+
+    .btn:active {
+      transform: scale(.97)
+    }
+
+    /* cards */
+    .card {
+      transform-style: preserve-3d;
+      will-change: transform
+    }
+
+    .card .icon {
+      transition: transform .4s cubic-bezier(.3, 1.6, .5, 1), background .3s, color .3s
+    }
+
+    .card:hover .icon {
+      transform: rotate(-8deg) scale(1.12);
+      background: #1f6f6b;
+      color: #fff
+    }
+
+    .panel {
+      transition: transform .3s, box-shadow .3s
+    }
+
+    .panel:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 44px rgba(31, 42, 55, .14)
+    }
+
+    .intro .photo img {
+      animation: bob 6s ease-in-out infinite
+    }
+
+    .vcard {
+      transition: transform .3s, box-shadow .3s
+    }
+
+    .vcard:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 44px rgba(31, 42, 55, .14)
+    }
+
+    .rel span {
+      display: inline-block;
+      transition: transform .25s
+    }
+
+    .rel:hover span {
+      transform: translateX(6px)
+    }
+
+    .socials a {
+      transition: .25s
+    }
+
+    .socials a:hover {
+      transform: translateY(-3px)
+    }
+
+    .section-head .tag::before {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 2px;
+      background: #e0824f;
+      vertical-align: middle;
+      margin-right: 0;
+      transition: width .6s .3s, margin .6s .3s
+    }
+
+    .section-head.in .tag::before,
+    .reveal.in .tag::before {
+      width: 28px;
+      margin-right: 10px
+    }
+
+    @media(max-width:760px) {
+      nav {
+        display: block;
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none
+      }
+
+      nav.open {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important
+      }
+
+      html {
+        scroll-behavior: auto
+      }
+
+      
+    }
+    /* =========================== END INTRO SECTION ============================== */
+
+
+
+/* ===== Reliable scroll reveal animation ===== */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 34px, 0);
+  transition: opacity .8s cubic-bezier(.2, .7, .2, 1),
+              transform .8s cubic-bezier(.2, .7, .2, 1);
+  transition-delay: 0s;
+  will-change: opacity, transform;
+}
+
+.reveal.left {
+  transform: translate3d(-40px, 0, 0);
+}
+
+.reveal.right {
+  transform: translate3d(40px, 0, 0);
+}
+
+.reveal.zoom {
+  transform: scale(.94);
+}
+
+.reveal.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.left,
+  .reveal.right,
+  .reveal.zoom {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.intro-users-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  background: #f7c2a8;
+  border: 0;
+  border-radius: 22px;
+  box-shadow: 0 14px 35px rgba(242, 93, 77, .18);
+}
+
+.intro-users-icon::before {
+  content: "";
+  position: absolute;
+  top: -90px;
+  right: -70px;
+  width: 240px;
+  height: 240px;
+  border: 1px solid rgba(255, 255, 255, .4);
+  border-radius: 50%;
+}
+
+.intro-users-icon::after {
+  content: "";
+  position: absolute;
+  bottom: -90px;
+  left: -70px;
+  width: 220px;
+  height: 220px;
+  background: rgba(255, 255, 255, .2);
+  border-radius: 50%;
+}
+
+.intro-users-icon i {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 135px;
+  height: 135px;
+  color: #1a235c;
+  background: rgba(255, 255, 255, .28);
+  border: 8px solid rgba(255, 255, 255, .4);
+  border-radius: 32px;
+  box-shadow: 0 14px 28px rgba(26, 35, 92, .14);
+  font-size: 58px;
+}
+@media (max-width: 760px) {
+  .intro-users-icon {
+    min-height: 260px;
+  }
+}
 </style>
+</head>
 <body>
 <div class="progress" id="progress" aria-hidden="true"></div>
 <div class="topline">
@@ -1634,6 +2234,156 @@
       </div>
     </div>
 
+      <!-- INTRO -->
+      <section>
+        <div class="wrap intro">
+          <div class="photo intro-users-icon" aria-hidden="true">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div>
+            <div class="section-head" style="margin-bottom:20px">
+              <span class="tag">Our approach</span>
+              <h2>Support rooted in real family life</h2>
+            </div>
+            <p>Our shelters often see parents and their children come and go. While they are with us, we help them build
+              the everyday skills that make home a calmer, healthier place for the whole family.</p>
+            <p>Our parenting classes cover those same topics, so every parent in our community can benefit from the
+              guidance we offer in our shelters.</p>
+            <blockquote>Strengthening families through education, to reduce isolation and build connections.</blockquote>
+          </div>
+        </div>
+      </section>
+
+    <section class="topics" id="topics">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Topics</span>
+          <h2>Four areas where parents tell us they need support</h2>
+          <p>Each topic is practical and focused on what families face day to day.</p>
+        </div>
+        <div class="grid4">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.3 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z" />
+              </svg></div>
+            <h3>Discipline &amp; Rewards</h3>
+            <p>Develop proper discipline and reward responses that guide children with care and consistency.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3c3 4 6 6.5 6 10a6 6 0 0 1-12 0c0-3.500 3-6 6-10z" />
+              </svg></div>
+            <h3>Cleanliness &amp; Hygiene</h3>
+            <p>Maintain cleanliness and hygiene habits that keep your home and your children healthy.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg></div>
+            <h3>Work &amp; Childcare</h3>
+            <p>Find a workable balance between your job and the care your children need.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.8 5.6a5.200 5.200 0 0 0-7.400 0L12 7l-1.400-1.400a5.200 5.200 0 0 0-7.400 7.400L12 21.800l8.800-8.800a5.200 5.200 0 0 0 0-7.400z" />
+              </svg></div>
+            <h3>Parenting Stress</h3>
+            <p>Address the physical and emotional stress of parenting, so you can care for yourself too.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Who it's for</span>
+          <h2>Whether you are just starting out or already in the thick of it</h2>
+        </div>
+        <div class="split">
+          <div class="panel">
+            <h3>Entering parenthood</h3>
+            <p>Expecting or new to parenting? We guide you as you enter this new chapter, so you feel prepared rather
+              than overwhelmed.</p>
+          </div>
+          <div class="panel dark">
+            <h3>Hitting bumps in the road</h3>
+            <p>Already a parent and facing a difficult season, perhaps with added emotional or financial pressure? You
+              do not have to handle it alone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="videos" id="stories">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Watch</span>
+          <h2>Hear from our community</h2>
+          <p>A client testimony and a recording from The Bridge ART, a community broadcast.</p>
+        </div>
+        <div class="vgrid">
+          <div class="vcard">
+            <div class="frame"><iframe src="https://www.youtube.com/embed/DUsn83Ddixo" title="WAFAA client testimony"
+                loading="lazy" allowfullscreen></iframe></div>
+            <div class="meta">
+              <h3>Client Testimony</h3>
+              <p>In their own words, a client shares their experience with WAFAA.</p>
+            </div>
+          </div>
+          <div class="vcard">
+            <div class="frame"><iframe src="https://www.youtube.com/embed/XIu4vSv2uBw" title="The Bridge ART"
+                loading="lazy" allowfullscreen></iframe></div>
+            <div class="meta">
+              <h3>The Bridge ART</h3>
+              <p>Broadcast recording from March 20 at 9pm EST.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta">
+          <h2>Ready to take the next step?</h2>
+          <p>Complete our client intake application or get in touch with the team to learn how WAFAA can support your
+            family.</p>
+          <div class="actions">
+            <a class="btn btn-light" href="https://www.wafaaorganization.org/client-intake-application/">Client Intake
+              Application</a>
+            <a class="btn btn-ghost" href="https://www.wafaaorganization.org/contact/">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="related">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:28px">
+          <span class="tag">Explore more</span>
+          <h2>Other WAFAA services</h2>
+        </div>
+        <div class="rel-grid">
+          <a class="rel" href="https://www.wafaaorganization.org/counseling-sessions/">Counseling Sessions
+            <span>→</span></a>
+          <a class="rel" href="https://www.wafaaorganization.org/crisis-intervention-therapy/">Crisis Intervention
+            Therapy <span>→</span></a>
+          <a class="rel" href="https://www.wafaaorganization.org/housing/">Emergency Housing <span>→</span></a>
+          <a class="rel" href="https://www.wafaaorganization.org/food-pantry-shelter/">Food Pantry &amp; Shelter
+            <span>→</span></a>
+          <a class="rel" href="https://www.wafaaorganization.org/legal-assistance/">Legal Assistance <span>→</span></a>
+          <a class="rel" href="https://www.wafaaorganization.org/workshops/">More Services &amp; Workshops
+            <span>→</span></a>
+        </div>
+      </div>
+    </section>
 
 
 
@@ -1668,541 +2418,180 @@
       ↗</a>
   </div>
 </footer>
-
-  
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+(function () {
+  'use strict';
 
-  // ==========================================
-  // 1. ELEMENTS
-  // ==========================================
+  function initPage() {
+    const header = document.querySelector('header.site');
+    const nav = document.getElementById('nav');
+    const menuButton = document.getElementById('menu-btn');
+    const progress = document.getElementById('progress');
+    const hero = document.querySelector('.hero');
+    const currentYear = document.getElementById('current-year');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const header = document.querySelector('header.site');
-  const nav = document.getElementById('nav');
-  const menuBtn = document.getElementById('menu-btn');
-  const progress = document.getElementById('progress');
-  const hero = document.querySelector('.hero');
-  const currentYear = document.getElementById('current-year');
+    if (currentYear) currentYear.textContent = new Date().getFullYear();
 
-  const reduceMotion = window.matchMedia(
-    '(prefers-reduced-motion: reduce)'
-  ).matches;
+    /* Header state, progress bar and hero parallax */
+    let ticking = false;
+    function updateScroll() {
+      const y = window.scrollY || document.documentElement.scrollTop;
+      if (header) header.classList.toggle('scrolled', y > 30);
 
-  const desktopQuery = window.matchMedia('(min-width: 761px)');
-  const hoverQuery = window.matchMedia('(hover: hover)');
+      if (progress) {
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.transform = 'scaleX(' + (total > 0 ? y / total : 0) + ')';
+      }
 
-  // ==========================================
-  // 2. CURRENT YEAR
-  // ==========================================
-
-  if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
-  }
-
-  // ==========================================
-  // 3. STICKY HEADER + SCROLL PROGRESS + PARALLAX
-  // ==========================================
-
-  let ticking = false;
-
-  function onScroll() {
-
-    const y = window.scrollY || document.documentElement.scrollTop;
-
-    // Sticky header
-    if (header) {
-      header.classList.toggle('scrolled', y > 30);
+      if (!reduceMotion && hero && y < hero.offsetHeight + 200) {
+        const heroInner = hero.querySelector('.wrap, .hero__grid');
+        if (heroInner) heroInner.style.transform = 'translate3d(0,' + (y * .06) + 'px,0)';
+      }
+      ticking = false;
     }
 
-    // Scroll progress bar
-    if (progress) {
-      const totalHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateScroll();
 
-      const percentage = totalHeight > 0 ? y / totalHeight : 0;
-
-      progress.style.transform = `scaleX(${percentage})`;
-    }
-
-    // Hero parallax
-    if (!reduceMotion && hero && y < hero.offsetHeight + 200) {
-
-      const inner = hero.querySelector('.wrap');
-
-      if (inner) {
-        inner.style.transform = `translateY(${y * 0.06}px)`;
+    /* Mobile navigation */
+    function closeMenu() {
+      if (!nav) return;
+      nav.classList.remove('open');
+      if (menuButton) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
       }
     }
 
-    ticking = false;
-  }
+    if (menuButton && nav) {
+      menuButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const open = nav.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded', String(open));
+        menuButton.innerHTML = open
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+      });
 
-  window.addEventListener('scroll', function () {
-
-    if (!ticking) {
-      requestAnimationFrame(onScroll);
-      ticking = true;
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
     }
 
-  }, { passive: true });
-
-  onScroll();
-
-  // ==========================================
-  // 4. DROPDOWNS
-  // ==========================================
-
-  function closeDropdowns(except = null) {
-
-    if (!nav) return;
-
-    // Close main dropdowns
-    nav.querySelectorAll('.nav-dropdown.open').forEach(function (dropdown) {
-
-      if (dropdown !== except) {
-
-        dropdown.classList.remove('open');
-
-        const button = dropdown.querySelector(
-          ':scope > .nav-dropdown__toggle'
-        );
-
-        if (button) {
-          button.setAttribute('aria-expanded', 'false');
-        }
-
-        // Close nested submenus
-        dropdown.querySelectorAll('.submenu.open').forEach(function (submenu) {
-
-          submenu.classList.remove('open');
-
-          const submenuBtn = submenu.querySelector('.submenu__toggle');
-
-          if (submenuBtn) {
-            submenuBtn.setAttribute('aria-expanded', 'false');
-          }
-
-        });
-
-      }
-
+    document.addEventListener('click', function (event) {
+      if (header && !header.contains(event.target)) closeMenu();
     });
 
-    // Close all nested submenus except those inside the preserved dropdown
-    nav.querySelectorAll('.submenu.open').forEach(function (submenu) {
-
-      if (!except || !except.contains(submenu)) {
-
-        submenu.classList.remove('open');
-
-        const button = submenu.querySelector('.submenu__toggle');
-
-        if (button) {
-          button.setAttribute('aria-expanded', 'false');
+    /* Dropdowns */
+    function closeDropdowns(exception) {
+      document.querySelectorAll('.nav-dropdown.open, .submenu.open').forEach(function (item) {
+        if (!exception || !exception.contains(item)) {
+          item.classList.remove('open');
+          const button = item.querySelector(':scope > button');
+          if (button) button.setAttribute('aria-expanded', 'false');
         }
+      });
+    }
 
-      }
-
-    });
-
-  }
-
-  // Main dropdown buttons
-  if (nav) {
-
-    nav.querySelectorAll('.nav-dropdown__toggle').forEach(function (button) {
-
+    document.querySelectorAll('.nav-dropdown__toggle, .submenu__toggle').forEach(function (button) {
       button.addEventListener('click', function (event) {
-
         event.preventDefault();
         event.stopPropagation();
-
-        const dropdown = button.closest('.nav-dropdown');
-
-        if (!dropdown) return;
-
-        const isOpen = dropdown.classList.contains('open');
-
-        closeDropdowns(dropdown);
-
-        dropdown.classList.toggle('open', !isOpen);
-
-        button.setAttribute('aria-expanded', String(!isOpen));
-
+        const parent = button.closest('.nav-dropdown, .submenu');
+        if (!parent) return;
+        const wasOpen = parent.classList.contains('open');
+        closeDropdowns(parent);
+        parent.classList.toggle('open', !wasOpen);
+        button.setAttribute('aria-expanded', String(!wasOpen));
       });
-
     });
 
-    // Nested submenu buttons
-    nav.querySelectorAll('.submenu__toggle').forEach(function (button) {
-
-      button.addEventListener('click', function (event) {
-
-        event.preventDefault();
-        event.stopPropagation();
-
-        const submenu = button.closest('.submenu');
-
-        if (!submenu) return;
-
-        const isOpen = submenu.classList.contains('open');
-
-        // Close other nested submenus
-        const parentDropdown = submenu.closest('.nav-dropdown');
-
-        if (parentDropdown) {
-
-          parentDropdown.querySelectorAll('.submenu.open').forEach(function (other) {
-
-            if (other !== submenu) {
-
-              other.classList.remove('open');
-
-              const otherBtn = other.querySelector('.submenu__toggle');
-
-              if (otherBtn) {
-                otherBtn.setAttribute('aria-expanded', 'false');
-              }
-
-            }
-
-          });
-
-        }
-
-        submenu.classList.toggle('open', !isOpen);
-
-        button.setAttribute('aria-expanded', String(!isOpen));
-
+    /* One scroll-reveal system */
+    function addReveal(selector, direction, delayStep) {
+      document.querySelectorAll(selector).forEach(function (element, index) {
+        element.classList.add('reveal');
+        if (direction) element.classList.add(direction);
+        if (delayStep) element.style.transitionDelay = (index * delayStep) + 's';
       });
-
-    });
-
-  }
-
-  // ==========================================
-  // 5. MOBILE MENU
-  // ==========================================
-
-  function closeMobileMenu() {
-
-    if (!nav || !menuBtn) return;
-
-    nav.classList.remove('open');
-
-    menuBtn.setAttribute('aria-expanded', 'false');
-    menuBtn.setAttribute('aria-label', 'Open navigation menu');
-
-    menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-
-    closeDropdowns();
-
-  }
-
-  if (menuBtn && nav) {
-
-    menuBtn.addEventListener('click', function (event) {
-
-      event.preventDefault();
-      event.stopPropagation();
-
-      const isOpen = nav.classList.toggle('open');
-
-      menuBtn.setAttribute('aria-expanded', String(isOpen));
-
-      if (isOpen) {
-
-        menuBtn.setAttribute('aria-label', 'Close navigation menu');
-
-        menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-
-      } else {
-
-        closeMobileMenu();
-
-      }
-
-    });
-
-    // Close mobile menu after clicking a link
-    nav.querySelectorAll('a').forEach(function (link) {
-
-      link.addEventListener('click', function () {
-        closeMobileMenu();
-      });
-
-    });
-
-  }
-
-  // ==========================================
-  // 6. CLOSE WHEN CLICKING OUTSIDE
-  // ==========================================
-
-  document.addEventListener('click', function (event) {
-
-    if (header && !header.contains(event.target)) {
-
-      closeMobileMenu();
-      closeDropdowns();
-
     }
 
-  });
+    addReveal('.hero [data-reveal]', null, .1);
+    addReveal('.intro .photo', 'left');
+    addReveal('.intro > div:last-child', 'right');
+    addReveal('.section-head');
+    addReveal('.grid4 .card', 'zoom', .12);
+    addReveal('.split .panel', null, .15);
+    addReveal('.vcard', 'zoom', .15);
+    addReveal('.cta', 'zoom');
+    addReveal('.rel', null, .08);
+    addReveal('.fgrid > div', null, .12);
 
-  // ==========================================
-  // 7. RESPONSIVE MENU RESET
-  // ==========================================
-
-  function handleBreakpointChange() {
-
-    if (desktopQuery.matches) {
-
-      closeMobileMenu();
-      closeDropdowns();
-
-    }
-
-  }
-
-  if (desktopQuery.addEventListener) {
-    desktopQuery.addEventListener('change', handleBreakpointChange);
-  } else {
-    desktopQuery.addListener(handleBreakpointChange);
-  }
-
-  // ==========================================
-  // 8. ACTIVE PAGE HIGHLIGHT
-  // ==========================================
-
-  if (nav) {
-
-    const currentPath =
-      window.location.pathname.replace(/\/+$/, '') || '/';
-
-    nav.querySelectorAll(
-      'a.link, .nav-dropdown__menu a, .submenu__menu a'
-    ).forEach(function (link) {
-
-      const linkPath =
-        new URL(link.href, window.location.origin)
-          .pathname.replace(/\/+$/, '') || '/';
-
-      if (linkPath === currentPath) {
-
-        link.classList.add('active');
-        link.setAttribute('aria-current', 'page');
-
-        const parentDropdown = link.closest('.nav-dropdown');
-
-        if (parentDropdown) {
-
-          const parentButton = parentDropdown.querySelector(
-            ':scope > .nav-dropdown__toggle'
-          );
-
-          if (parentButton) {
-            parentButton.classList.add('active');
-          }
-
-        }
-
-        const parentSubmenu = link.closest('.submenu');
-
-        if (parentSubmenu) {
-
-          const submenuButton = parentSubmenu.querySelector(
-            '.submenu__toggle'
-          );
-
-          if (submenuButton) {
-            submenuButton.classList.add('active');
-          }
-
-        }
-
-      }
-
-    });
-
-  }
-
-  // ==========================================
-  // 9. SCROLL REVEAL ANIMATIONS
-  // ==========================================
-
-  // Existing data-reveal elements
-  const revealElements = document.querySelectorAll('[data-reveal]');
-
-  // Add reveal classes to other elements
-  function addReveal(selector, direction, step) {
-
-    document.querySelectorAll(selector).forEach(function (element, index) {
-
-      element.classList.add('reveal');
-
-      if (direction) {
-        element.classList.add(direction);
-      }
-
-      if (step) {
-        element.style.setProperty('--d', (index * step) + 's');
-      }
-
-    });
-
-  }
-
-  addReveal('.intro .photo', 'left');
-  addReveal('.intro > div:last-child', 'right');
-  addReveal('.section-head');
-  addReveal('.grid4 .card', 'zoom', 0.12);
-  addReveal('.split .panel', null, 0.15);
-  addReveal('.vcard', 'zoom', 0.15);
-  addReveal('.cta', 'zoom');
-  addReveal('.rel', null, 0.08);
-  addReveal('.fgrid > div', null, 0.12);
-
-  // Combine both reveal systems
-  const allRevealElements = document.querySelectorAll(
-    '[data-reveal], .reveal'
-  );
-
-  if ('IntersectionObserver' in window && !reduceMotion) {
-
-    const revealObserver = new IntersectionObserver(function (entries, observer) {
-
-      entries.forEach(function (entry) {
-
-        if (entry.isIntersecting) {
-
+    const revealElements = document.querySelectorAll('.reveal');
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      revealElements.forEach(function (element) {
+        element.classList.add('is-visible');
+      });
+    } else {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
           const element = entry.target;
-
-          element.classList.add('is-visible', 'in');
-
+          element.classList.add('is-visible');
           observer.unobserve(element);
+          element.addEventListener('transitionend', function removeReveal(event) {
+            if (event.target !== element || event.propertyName !== 'opacity') return;
+            element.classList.remove('reveal', 'left', 'right', 'zoom');
+            element.style.removeProperty('transition-delay');
+          }, { once: true });
+        });
+      }, { threshold: .12, rootMargin: '0px 0px -48px 0px' });
+      revealElements.forEach(function (element) { observer.observe(element); });
+    }
 
-          // Restore normal hover transitions after reveal
-          if (element.classList.contains('reveal')) {
-
-            element.addEventListener('transitionend', function done(event) {
-
-              if (
-                event.target !== element ||
-                event.propertyName !== 'opacity'
-              ) return;
-
-              element.classList.remove(
-                'reveal',
-                'left',
-                'right',
-                'zoom'
-              );
-
-              element.style.removeProperty('--d');
-
-            }, { once: true });
-
-          }
-
-        }
-
+    /* Card tilt */
+    if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
+      document.querySelectorAll('.grid4 .card').forEach(function (card) {
+        card.addEventListener('mousemove', function (event) {
+          const rect = card.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width - .5;
+          const y = (event.clientY - rect.top) / rect.height - .5;
+          card.style.transform = 'perspective(700px) rotateX(' + (-y * 8) + 'deg) rotateY(' + (x * 8) + 'deg) translateY(-4px)';
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+        });
       });
+    }
 
-    }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -48px 0px'
+    /* Smooth anchors with sticky-header offset */
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        const selector = link.getAttribute('href');
+        if (!selector || selector === '#') return;
+        const target = document.querySelector(selector);
+        if (!target) return;
+        event.preventDefault();
+        const offset = header ? header.offsetHeight : 0;
+        window.scrollTo({
+          top: target.getBoundingClientRect().top + window.scrollY - offset - 10,
+          behavior: reduceMotion ? 'auto' : 'smooth'
+        });
+      });
     });
+  }
 
-    allRevealElements.forEach(function (element) {
-      revealObserver.observe(element);
-    });
-
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPage);
   } else {
-
-    allRevealElements.forEach(function (element) {
-      element.classList.add('is-visible', 'in');
-    });
-
+    initPage();
   }
-
-  // ==========================================
-  // 10. 3D TILT ON CARDS
-  // ==========================================
-
-  if (!reduceMotion && hoverQuery.matches) {
-
-    document.querySelectorAll('.grid4 .card').forEach(function (card) {
-
-      card.addEventListener('mousemove', function (event) {
-
-        const rect = card.getBoundingClientRect();
-
-        const x = (event.clientX - rect.left) / rect.width - 0.5;
-        const y = (event.clientY - rect.top) / rect.height - 0.5;
-
-        card.style.transition = 'box-shadow .25s';
-
-        card.style.transform =
-          `perspective(700px) rotateX(${-y * 8}deg) rotateY(${x * 8}deg) translateY(-4px)`;
-
-      });
-
-      card.addEventListener('mouseleave', function () {
-
-        card.style.transition =
-          'transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .25s';
-
-        card.style.transform = '';
-
-      });
-
-    });
-
-  }
-
-  // ==========================================
-  // 11. SMOOTH ANCHOR SCROLLING
-  // ==========================================
-
-  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-
-    link.addEventListener('click', function (event) {
-
-      const href = link.getAttribute('href');
-
-      if (!href || href === '#') return;
-
-      let target;
-
-      try {
-        target = document.querySelector(href);
-      } catch (error) {
-        return;
-      }
-
-      if (!target) return;
-
-      event.preventDefault();
-
-      const headerHeight = header ? header.offsetHeight : 0;
-
-      const top =
-        target.getBoundingClientRect().top +
-        window.scrollY -
-        headerHeight -
-        10;
-
-      window.scrollTo({
-        top: top,
-        behavior: reduceMotion ? 'auto' : 'smooth'
-      });
-
-    });
-
-  });
-
-});
+})();
 </script>
 
 </body>
